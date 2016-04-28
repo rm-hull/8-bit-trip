@@ -23,7 +23,7 @@ function header(frameRate, bitsPerSample) {
 
   let data = flatten(
     str("data"),
-    intLittleEndian(0x7fffffff));
+    intLittleEndian(0x7FFFFFFF));
 
   return flatten(riff, fmt, data);
 }
