@@ -16,6 +16,8 @@ function errorHandler(err, req, res, next) {
 }
 
 const app = express();
+
+app.use(express.static("public"));
 app.use(logErrors);
 app.use(errorHandler);
 
