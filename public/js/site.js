@@ -13,7 +13,7 @@ function addLine(text) {
 function showHelp() {
   addLine();
   addLine("Enter a valid mathematical expression using basic arithmetic operators " +
-          "(+, -, *, /, <<, >>, %), bitwise operators (&, |, ^), parentheses and " +
+          "(+, -, *, /, %), bitwise operators (&, |, ^, <<, >>), parentheses and " +
           "variable 't' (which monotonically increases automatically). The " +
           "resulting generator of 8-bit values will be reconstructed as an " +
           "audio stream.");
