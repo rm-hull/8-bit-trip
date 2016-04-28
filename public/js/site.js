@@ -48,5 +48,6 @@ expr.onkeypress = function(evt) {
     }
 
     expr.value = "";
+    expr.scrollIntoView({behaviour: "instant", block: "end"});
   }
 };
