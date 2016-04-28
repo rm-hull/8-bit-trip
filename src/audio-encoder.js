@@ -32,16 +32,22 @@ export function audioStream(rawData, frameRate, bitsPerSample) {
 
   let gen = flatten(header(frameRate, bitsPerSample), rawData);
   let rs = Readable();
+  rs.setEncoding('ascii');
 
-  rs._read = () => {
-    let { done, value } = gen.next();
-    process.stdout.write(" ");
-    process.stdout.write(value.toString());
-    if (done) {
-      rs.push(null);
-    } else {
-      rs.push(String.fromCharCode(value));
+  rs._read = (size) => {
+    let pos = 0;
+    let buf = new Buffer(size);
+    while (pos < size) {
+      let { done, value } = gen.next();
+      if (done) {
+        rs.push(buf);
+        rs.push(null);
+        return;
+      } else {
+        buf.writeUInt8(value, pos++);
+      }
     }
+    rs.push(buf);
   };
 
   return rs;
