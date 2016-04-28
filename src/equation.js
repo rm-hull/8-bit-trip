@@ -1,5 +1,5 @@
 export function validate(s) {
-  if (/^[0-9\+\-\/\*\&\|\<\>t\(\) ]+$/.test(s)) {
+  if (/^[0-9\+\-\/\*\%\&\|\<\>t\(\) ]+$/.test(s)) {
     return s;
   }
   throw new Error("Invalid expression: " + s);
