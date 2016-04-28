@@ -11,7 +11,6 @@ body, input {
 }
 
 a, a:visited {
-    font-weight: bold;
     color: green;
     text-decoration: none;
 }
