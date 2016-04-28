@@ -5,20 +5,23 @@ import { validate, compute } from "./equation";
 import { shortLittleEndian } from "./byte-converters";
 import { flatMap } from "./generators";
 
-function comp(f, g) {
-  return (x) => g(f(x));
+function logErrors(err, req, res, next) {
+  console.error(err.stack);
+  next(err);
 }
 
-function upscale8bit(n) {
-  return 0xFF * (0xFF & n);
+function errorHandler(err, req, res, next) {
+  res.status(500);
+  res.render("Error", { error: err });
 }
 
 const app = express();
+app.use(logErrors);
+app.use(errorHandler);
 
 app.get("/:eqn", (req, res) => {
 
   let eqn = flatMap(
-    //comp(upscale8bit, shortLittleEndian),
     function*(n) { yield n & 0xFF; },
     compute(req.params.eqn));
 
