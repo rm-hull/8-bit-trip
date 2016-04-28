@@ -25,6 +25,11 @@ function clearScrollback() {
   }
 }
 
+document.onclick = function(evt) {
+  document.execCommand('copy');
+  expr.focus();
+};
+
 expr.focus();
 expr.onkeypress = function(evt) {
 
