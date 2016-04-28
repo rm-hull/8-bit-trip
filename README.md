@@ -42,6 +42,7 @@ The following symbols are allowed in expressions, nested to any level of complex
 | %      | Modulus             |
 | &      | Bitwise AND         |
 | \|     | Bitwise OR          |
+| ^      | Bitwise XOR         |
 | ( )    | Parentheses         |
 | 0-9    | Integers            |
 | t      | Incrementing ticker |
