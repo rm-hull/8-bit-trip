@@ -32,7 +32,6 @@ export function audioStream(rawData, frameRate, bitsPerSample) {
 
   let gen = flatten(header(frameRate, bitsPerSample), rawData);
   let rs = Readable();
-  rs.setEncoding('ascii');
 
   rs._read = (size) => {
     let pos = 0;
