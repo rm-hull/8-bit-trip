@@ -1,7 +1,9 @@
 # 8-bit Trip
 
 _8-bit Trip_ is a node.js port of [sound-flour](https://github.com/rm-hull/sound-flour)
-deployed onto a [zeit.co/now](https://zeit.co/now#) instance.
+deployed onto a [zeit.co/now](https://zeit.co/now#) instance. _8-bit Trip_ is also an
+[awesome song](https://www.youtube.com/watch?v=4qsWFFuYZYI) by **Rymdreglage**.
+
 
 ## Build
 
@@ -19,12 +21,44 @@ This will start an express app on http://localhost:3000.
 
 ## Usage
 
-Anything after the base URL is treated as an equation; the only bound variable is _t_, to represent a instant in time.
-_t_ only ever increments, and should be used as follows in a browser:
+Anything after the base URL is treated as an equation; the only bound variable
+is _t_, to represent a instant in time. _t_ only ever increments, and should be
+used as follows in a browser:
 
-http://localhost:3000/(t>>6|t|t>>(t>>16))*10+((t>>11)&7))
+[http://localhost:3000/(t>>6|t|t>>(t>>16))*10+((t>>11)&7))](http://localhost:3000/(t>>6|t|t>>(t>>16))*10+((t>>11)&7)))
 
 or the zeit server:
+
+[https://8-bit-trip-svklvuztbz.now.sh/(t>>6|t|t>>(t>>16))*10+((t>>11)&7)](https://8-bit-trip-svklvuztbz.now.sh/(t%3E%3E6%7Ct%7Ct%3E%3E(t%3E%3E16))*10+((t%3E%3E11)&7))
+
+The following symbols are allowed in expressions, nested to any level of complexity:
+
+| Symbol | Description         |
+|--------|---------------------|
+| +      | Addition            |
+| -      | Subtraction         |
+| *      | Multiplication      |
+| /      | Division            |
+| %      | Modulus             |
+| &      | Bitwise AND         |
+| \|     | Bitwise OR          |
+| ( )    | Parentheses         |
+| 0-9    | Integers            |
+| t      | Incrementing ticker |
+
+Usual operator precedence rules apply.
+
+### Special considerations
+
+* Most browsers will need special URL encoding to handle division (`/`) and modulus
+  (`%`) operators in the expression. There will possibly be a frontend coming soon.
+* Error handling is currently very fragile/non-existent, so please be gentle.
+
+### More examples
+
+* [https://8-bit-trip-svklvuztbz.now.sh/(t*(t>>5|t>>8))>>(t>>16)](https://8-bit-trip-svklvuztbz.now.sh/(t*(t%3E%3E5%7Ct%3E%3E8))%3E%3E(t%3E%3E16))
+* [https://8-bit-trip-svklvuztbz.now.sh/(t*((t>>12|t>>8)&63&t>>4))](https://8-bit-trip-svklvuztbz.now.sh/(t*((t%3E%3E12%7Ct%3E%3E8)&63&t%3E%3E4)))
+* [https://8-bit-trip-svklvuztbz.now.sh/(t%(t/(t>>9|t>>13)))](https://8-bit-trip-svklvuztbz.now.sh/(t%25(t%2F(t%3E%3E9%7Ct%3E%3E13))))
 
 ## License
 
