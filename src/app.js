@@ -18,11 +18,12 @@ const app = express();
 app.get("/:eqn", (req, res) => {
 
   let eqn = flatMap(
-    comp(upscale8bit, shortLittleEndian),
+    //comp(upscale8bit, shortLittleEndian),
+    function*(n) { yield n & 0xFF; },
     compute(req.params.eqn));
 
   res.type("audio/x-wav");
-  audioStream(eqn, 8000, 16).pipe(res);
+  audioStream(eqn, 8000, 8).pipe(res, "binary");
 });
 
 app.listen(3000);
