@@ -11,10 +11,20 @@ function addLine(text) {
 }
 
 function showHelp() {
-  addLine("Enter an expression using basic arithmetic operators (+, -, *, /, <<, >>, %) and a monotonically increasing variable t. The resulting generator of 8-bit values will be reconstructed as an audio stream.");
+  addLine();
+  addLine("Enter a valid mathematical expression using basic arithmetic operators " +
+          "(+, -, *, /, <<, >>, %), bitwise operators (&, |, ^), parentheses and " +
+          "variable 't' (which monotonically increases automatically). The " +
+          "resulting generator of 8-bit values will be reconstructed as an " +
+          "audio stream.");
   addLine();
   addLine("For example:");
   addLine("  (t>>6|t|t>>(t>>16))*10+((t>>11)&7)");
+  addLine();
+  addLine("See also:");
+  addLine(" * <a target=\"_blank\" href=\"https://github.com/rm-hull/8-bit-trip\">https://github.com/rm-hull/8-bit-trip</a>");
+  addLine(" * <a target=\"_blank\" href=\"https://www.youtube.com/watch?v=GtQdIYUtAHg\">https://www.youtube.com/watch?v=GtQdIYUtAHg</a>");
+  addLine(" * <a target=\"_blank\" href=\"http://wurstcaptures.untergrund.net/music/\">http://wurstcaptures.untergrund.net/music/</a>");
   addLine();
 }
 
