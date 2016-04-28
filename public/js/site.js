@@ -53,6 +53,9 @@ expr.onkeypress = function(evt) {
       case "clear":
         clearScrollback();
         break;
+      case "exit":
+        window.location.href = "https://google.com";
+        break;
       default:
         break;
     }
