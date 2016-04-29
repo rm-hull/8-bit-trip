@@ -43,7 +43,7 @@ document.onclick = function(evt) {
 expr.focus();
 expr.onkeypress = function(evt) {
 
-  if (evt.charCode === 13) {
+  if (evt.which === 13) {
     addLine("$ " + expr.value);
 
     switch (expr.value) {
