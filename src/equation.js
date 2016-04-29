@@ -11,7 +11,6 @@ export function validate(s) {
 }
 
 export function* compute(expr) {
-  validate(expr);
   var t = 0;
   var v = 0;
   var x = 0;

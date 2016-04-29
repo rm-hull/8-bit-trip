@@ -17,4 +17,7 @@ export function* shortLittleEndian(n) {
   yield 0xFF & (n >> 8);
 }
 
+export function* byteClip(n) {
+  yield 0xFF & n;
+}
 

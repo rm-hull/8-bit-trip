@@ -2,7 +2,7 @@ import express from "express";
 
 import { audioStream } from "./audio-encoder";
 import { validate, compute } from "./equation";
-import { shortLittleEndian } from "./byte-converters";
+import { shortLittleEndian, byteClip } from "./byte-converters";
 import { flatMap } from "./generators";
 
 function logErrors(err, req, res, next) {
@@ -21,14 +21,14 @@ app.use(express.static("public"));
 app.use(logErrors);
 app.use(errorHandler);
 
-app.get("/:eqn", (req, res) => {
+app.get("/:hz/:expr", (req, res) => {
 
-  let eqn = flatMap(
-    function*(n) { yield n & 0xFF; },
-    compute(req.params.eqn));
+  let hz = parseInt(req.params.hz);
+  let expr = validate(req.params.expr);
+  let gen = flatMap(byteClip, compute(expr));
 
   res.type("audio/x-wav");
-  audioStream(eqn, 8000, 8).pipe(res, "binary");
+  audioStream(gen, hz, 8).pipe(res, "binary");
 });
 
 app.listen(3000);
