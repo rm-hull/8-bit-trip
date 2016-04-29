@@ -25,3 +25,17 @@ input, input:focus {
   white-space: pre-wrap;
 }
 
+.wtf {
+  color: orangered;
+  font-size: 6rem;
+  font-family: sans-serif;
+  position: fixed;
+  bottom: -50%;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.error {
+  font-weight: bold;
+}
