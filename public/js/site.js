@@ -134,7 +134,7 @@ input.onkeypress = function(evt) {
         break;
 
       case "play":
-        play();
+        play(currentExpr);
         break;
 
       case "pause":
