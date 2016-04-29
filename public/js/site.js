@@ -3,7 +3,7 @@
 var scrollback = document.getElementById("scrollback");
 var audioControl = document.getElementById("audiocontrol");
 var input = document.getElementById("expression");
-var currentExpr = null;
+var currentExpr = window.location.hash ? [8000, window.location.hash.substr(1)] : null;
 
 function addLine(text) {
   var div = document.createElement("div");
@@ -194,3 +194,8 @@ input.onkeypress = function(evt) {
     input.scrollIntoView({behaviour: "instant", block: "end"});
   }
 };
+
+if (currentExpr) {
+  addLine("Auto-playing: " + currentExpr[1]);
+  play(currentExpr);
+}
