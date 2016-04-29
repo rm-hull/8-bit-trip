@@ -20,11 +20,27 @@ function showHelp() {
   addLine();
   addLine("For example:");
   addLine("  (t>>6|t|t>>(t>>16))*10+((t>>11)&7)");
+  addLine("  (t%(t/(t>>9|t>>13)))");
+  addLine("  (t*(t>>5|t>>8))>>(t>>16)");
   addLine();
   addLine("See also:");
   addLine(" * <a target=\"_blank\" href=\"https://github.com/rm-hull/8-bit-trip\">https://github.com/rm-hull/8-bit-trip</a>");
   addLine(" * <a target=\"_blank\" href=\"https://www.youtube.com/watch?v=GtQdIYUtAHg\">https://www.youtube.com/watch?v=GtQdIYUtAHg</a>");
   addLine(" * <a target=\"_blank\" href=\"http://wurstcaptures.untergrund.net/music/\">http://wurstcaptures.untergrund.net/music/</a>");
+  addLine();
+}
+
+function showCommands() {
+  addLine();
+  addLine(" help     - show some basic help");
+  addLine(" clear    - clear the screen");
+  addLine(" commands - list all the commands available");
+  addLine(" random   - pick a random expression, and play it");
+  addLine(" play     - plays a previously paused/stopped audio stream");
+  addLine(" pause    - pause a running audio stream");
+  addLine(" stop     - stop a running audio stream (also cancels network download)");
+  addLine(" restart  - reload and restart the current audio stream");
+  addLine(" exit     - quit the system");
   addLine();
 }
 
@@ -47,6 +63,9 @@ input.onkeypress = function(evt) {
     addLine("$ " + input.value);
 
     switch (input.value.toLowerCase().trim()) {
+      case "commands":
+        showCommands();
+        break;
 
       case "help":
         showHelp();
