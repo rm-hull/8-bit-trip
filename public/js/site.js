@@ -1,7 +1,7 @@
 "use strict";
 
 var scrollback = document.getElementById("scrollback");
-var expr = document.getElementById("expression");
+var input = document.getElementById("expression");
 
 function addLine(text) {
   var div = document.createElement("div");
@@ -37,16 +37,17 @@ function clearScrollback() {
 
 document.onclick = function(evt) {
   document.execCommand('copy');
-  expr.focus();
+  input.focus();
 };
 
-expr.focus();
-expr.onkeypress = function(evt) {
+input.focus();
+input.onkeypress = function(evt) {
 
   if (evt.which === 13) {
-    addLine("$ " + expr.value);
+    addLine("$ " + input.value);
 
-    switch (expr.value) {
+    switch (input.value.toLowerCase().trim()) {
+
       case "help":
         showHelp();
         break;
@@ -60,7 +61,7 @@ expr.onkeypress = function(evt) {
         break;
     }
 
-    expr.value = "";
-    expr.scrollIntoView({behaviour: "instant", block: "end"});
+    input.value = "";
+    input.scrollIntoView({behaviour: "instant", block: "end"});
   }
 };
