@@ -44,8 +44,13 @@ The following symbols are allowed in expressions, nested to any level of complex
 | \|     | Bitwise OR          |
 | ^      | Bitwise XOR         |
 | ( )    | Parentheses         |
+| [ ]    | Array access        |
+| "      | String delimiters   |
 | 0-9    | Integers            |
 | t      | Incrementing ticker |
+| v =    | Assigning variable  |
+| ? :    | Ternary operator    |
+
 
 Usual operator precedence rules apply.
 
