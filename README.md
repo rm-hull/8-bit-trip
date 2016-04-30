@@ -51,7 +51,6 @@ The following symbols are allowed in expressions, nested to any level of complex
 | v =    | Assigning variable  |
 | ? :    | Ternary operator    |
 
-
 Usual operator precedence rules apply.
 
 ### More examples
