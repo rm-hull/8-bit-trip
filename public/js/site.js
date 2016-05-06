@@ -5,6 +5,39 @@ var audioControl = document.getElementById("audiocontrol");
 var input = document.getElementById("expression");
 var currentExpr = window.location.hash ? [8000, decodeURIComponent(window.location.hash.substr(1))] : null;
 
+var TreeNode = function(left, right, operator) {
+  this.left = left;
+  this.right = right;
+  this.operator = operator;
+
+  this.toString = function() {
+    return "(" + left + operator + right + ")";
+  };
+};
+
+function randomNumberRange(min, max) {
+  return Math.floor(Math.random() * (max - min) + min);
+}
+
+// Some operators appear more frequently than others
+var operators = ["/","*","*","*","-","+","+","+","%","|","|","&","&","^","^",">>",">>"];
+
+function buildTree(numNodes) {
+  if (numNodes <= 1 ) {
+    return Math.random() < 0.4 ? "t" : randomNumberRange(1, 30);
+  }
+
+  var ratio = Math.random();
+  var numLeft = Math.floor(numNodes * ratio);
+  var numRight = Math.ceil(numNodes * (1 - ratio));
+
+  var leftSubTree = buildTree(numLeft);
+  var rightSubTree = buildTree(numRight);
+
+  var m = randomNumberRange(0, operators.length);
+  return new TreeNode(leftSubTree, rightSubTree, operators[m]);
+}
+
 function addLine(text) {
   var div = document.createElement("div");
   div.className = "output";
@@ -37,7 +70,8 @@ function showCommands() {
   addLine(" help     - show some basic help");
   addLine(" clear    - clear the screen");
   addLine(" commands - list all the commands available");
-  addLine(" random   - pick a random expression, and play it");
+  addLine(" predef   - pick a random pre-defined expression, and play it");
+  addLine(" random   - generate a random expression, and play it");
   addLine(" play     - plays a previously paused/stopped audio stream");
   addLine(" pause    - pause a running audio stream");
   addLine(" stop     - stop a running audio stream (also cancels network download)");
@@ -58,7 +92,7 @@ function validate(s) {
     var t = 0;
     var v = 0;
     var x = 0;
-    var y = 0
+    var y = 0;
     var res = eval(s);
     return s;
   }
@@ -96,6 +130,14 @@ function restart(n) {
 }
 
 function random() {
+  var n = randomNumberRange(4, 20);
+  var expr = [8000, buildTree(n)];
+  addLine("Playing: " + expr[1]);
+  play(expr);
+}
+
+
+function predef() {
   var choices = [
     // attribution: see youtube vids from viznut
     [8000, "(t>>6|t|t>>(t>>16))*10+((t>>11)&7)"],
@@ -130,7 +172,7 @@ function random() {
     [8000, "t*(t^t+(t>>15|1)^(t-1280^t)>>10)"],
     [32000, "(3e3/(y=t&16383)&1)*35+(x=t*\"6689\"[t>>16&3]/24&127)*y/4e4+((t>>8^t>>10|t>>14|x)&63)"]
   ];
-  var n = Math.floor(Math.random() * choices.length);
+  var n = randomNumberRange(0, choices.length);
   var expr = choices[n];
   addLine("Playing: " + expr[1]);
   play(expr);
@@ -147,7 +189,8 @@ input.onkeypress = function(evt) {
   if (evt.which === 13) {
     addLine("$ " + input.value);
 
-    switch (input.value.toLowerCase().trim()) {
+    var cmd = input.value.toLowerCase().trim();
+    switch (cmd) {
       case "commands":
         showCommands();
         break;
@@ -176,6 +219,10 @@ input.onkeypress = function(evt) {
         stop();
         break;
 
+      case "predef":
+        predef();
+        break;
+
       case "random":
         random();
         break;
@@ -184,9 +231,12 @@ input.onkeypress = function(evt) {
         window.location.href = "https://google.com";
         break;
 
+      case "":
+        break;
+
       default:
         stop();
-        play([8000, input.value]);
+        play([8000, cmd]);
         break;
     }
 
