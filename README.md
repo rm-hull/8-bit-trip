@@ -10,7 +10,7 @@ deployed onto a [zeit.co/now](https://zeit.co/now#) instance. _8-bit Trip_ is al
 [![Build Status][travis-badge]][travis-url]
 [![Coverage Status][coverage-badge]][coverage-url]
 [![Dependency Status][david-badge]][david-url]
-[![Maintenance][maintenance-badge]]()
+[maintenance-badge](https://img.shields.io/maintenance/yes/2017.svg?maxAge=2592000)
 
 Run locally with:
 
@@ -95,4 +95,3 @@ SOFTWARE.
 [david-url]: https://david-dm.org/rm-hull/8-bit-trip
 [coverage-badge]: https://coveralls.io/repos/rm-hull/8-bit-trip/badge.svg?branch=master
 [coverage-url]: https://coveralls.io/r/rm-hull/8-bit-trip?branch=master)
-[maintenance-badge]: (https://img.shields.io/maintenance/yes/2017.svg?maxAge=2592000)
