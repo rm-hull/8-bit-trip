@@ -94,4 +94,4 @@ SOFTWARE.
 [david-badge]: https://david-dm.org/rm-hull/8-bit-trip.svg
 [david-url]: https://david-dm.org/rm-hull/8-bit-trip
 [coverage-badge]: https://coveralls.io/repos/rm-hull/8-bit-trip/badge.svg?branch=master
-[coverage-url]: https://coveralls.io/r/rm-hull/8-bit-trip?branch=master)
+[coverage-url]: https://coveralls.io/r/rm-hull/8-bit-trip?branch=master
