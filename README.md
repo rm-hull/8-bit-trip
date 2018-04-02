@@ -30,7 +30,7 @@ used as follows in a browser:
 
 or the zeit server:
 
-[https://8-bit-trip-eyeibocely.now.sh/#(t>>6|t|t>>(t>>16))*10+((t>>11)&7)](https://8-bit-trip-eyeibocely.now.sh/#(t%3E%3E6%7Ct%7Ct%3E%3E(t%3E%3E16))*10+((t%3E%3E11)&7))
+[https://8-bit-trip-ustnyfnwnn.now.sh/#(t>>6|t|t>>(t>>16))*10+((t>>11)&7)](https://8-bit-trip-ustnyfnwnn.now.sh/#(t%3E%3E6%7Ct%7Ct%3E%3E(t%3E%3E16))*10+((t%3E%3E11)&7))
 
 The following symbols are allowed in expressions, nested to any level of complexity:
 
@@ -57,11 +57,11 @@ Usual operator precedence rules apply.
 
 ### More examples
 
-* [https://8-bit-trip-eyeibocely.now.sh/#(t*(t>>5|t>>8))>>(t>>16)](https://8-bit-trip-eyeibocely.now.sh/#(t*(t%3E%3E5%7Ct%3E%3E8))%3E%3E(t%3E%3E16))
-* [https://8-bit-trip-eyeibocely.now.sh/#(t*((t>>12|t>>8)&63&t>>4))](https://8-bit-trip-eyeibocely.now.sh/#(t*((t%3E%3E12%7Ct%3E%3E8)&63&t%3E%3E4)))
-* [https://8-bit-trip-eyeibocely.now.sh/#(t%(t/(t>>9|t>>13)))](https://8-bit-trip-eyeibocely.now.sh/#(t%25(t%2F(t%3E%3E9%7Ct%3E%3E13))))
+* [https://8-bit-trip-ustnyfnwnn.now.sh/#(t*(t>>5|t>>8))>>(t>>16)](https://8-bit-trip-ustnyfnwnn.now.sh/#(t*(t%3E%3E5%7Ct%3E%3E8))%3E%3E(t%3E%3E16))
+* [https://8-bit-trip-ustnyfnwnn.now.sh/#(t*((t>>12|t>>8)&63&t>>4))](https://8-bit-trip-ustnyfnwnn.now.sh/#(t*((t%3E%3E12%7Ct%3E%3E8)&63&t%3E%3E4)))
+* [https://8-bit-trip-ustnyfnwnn.now.sh/#(t%(t/(t>>9|t>>13)))](https://8-bit-trip-ustnyfnwnn.now.sh/#(t%25(t%2F(t%3E%3E9%7Ct%3E%3E13))))
 
-At the console, type '**RANDOM**' and it wil pick one from a couple of dozen
+At the console, type '**PREDEF**' and it wil pick one from a couple of dozen
 different expressions.
 
 ## License
