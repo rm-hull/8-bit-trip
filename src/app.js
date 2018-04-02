@@ -1,5 +1,6 @@
 import express from "express";
 import cluster from "cluster";
+import { PNG } from "pngjs";
 import _ from "lodash";
 
 import { audioStream } from "./audio-encoder";
@@ -26,6 +27,25 @@ function server(port) {
   app.use(express.static("public"));
   app.use(logErrors);
   app.use(errorHandler);
+
+  app.get("/img/:expr", (req, res) => {
+    let sz = parseInt(req.query.sz) || 1024;
+    let expr = validate(req.params.expr);
+    let gen = flatMap(byteClip, compute(expr));
+    console.log(`Generating image/png for ${expr} (size ${sz}x${sz}px)`);
+    res.type("image/png");
+    let png = new PNG({width: sz, height: sz});
+    for (let i = 0; i < sz * sz; i++) {
+      let idx = i << 2;
+      let value = gen.next().value;
+      png.data[idx++] = 0x00;
+      png.data[idx++] = value;
+      png.data[idx++] = 0x00;
+      png.data[idx] = 0xFF;
+    }
+
+    png.pack().pipe(res, "binary")
+  })
 
   app.get("/:hz/:expr", (req, res) => {
 

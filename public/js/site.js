@@ -75,6 +75,7 @@ function showCommands() {
   addLine(" play     - plays a previously paused/stopped audio stream");
   addLine(" pause    - pause a running audio stream");
   addLine(" stop     - stop a running audio stream (also cancels network download)");
+  addLine(" image    - shows an image, visualizing the currently playing expression");
   addLine(" restart  - reload and restart the current audio stream");
   addLine(" exit     - quit the system");
   addLine();
@@ -114,6 +115,17 @@ function play(expr) {
     addLine("<span class=\"error\">" + e.message + "</span>");
   }
 }
+
+function image() {
+  if (currentExpr) {
+    var img = document.createElement("img");
+    img.setAttribute('src', 'img/' + encodeURIComponent(currentExpr[1]) + '?sz=512');
+    img.setAttribute('height', '512');
+    img.setAttribute('width', '512');
+    scrollback.appendChild(img);
+  }
+}
+
 
 function stop() {
   audioControl.pause();
@@ -225,6 +237,10 @@ input.onkeypress = function(evt) {
 
       case "random":
         random();
+        break;
+
+      case "image":
+        image();
         break;
 
       case "exit":
