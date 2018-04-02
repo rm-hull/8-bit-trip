@@ -7,8 +7,6 @@ var mocha = require("gulp-mocha");
 var eslint = require("gulp-eslint");
 var babel = require("gulp-babel");
 
-require("babel-core/register");
-
 var config = {
   src: ["src/**/*.js"],
   test: ["test/**/*.spec.js"]
