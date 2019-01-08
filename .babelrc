@@ -1,5 +1,5 @@
 {
-  "presets": [ "env", "stage-2" ],
-  "plugins": [ "transform-runtime", "syntax-async-functions"],
+  "presets": [ "@babel/env" ],
+  "plugins": [ "@babel/plugin-transform-runtime"],
   "sourceMap": "both"
 }

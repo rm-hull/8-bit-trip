@@ -2,7 +2,7 @@ language: node_js
 node_js:
   - "8"
 before_script:
-  - npm install -g gulp
+  - npm install -g gulp-cli
 script: 
-  - gulp coverage
-  - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
+  - gulp test # coverage
+    #  - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
