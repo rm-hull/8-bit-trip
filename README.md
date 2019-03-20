@@ -10,7 +10,7 @@ deployed onto a [zeit.co/now](https://zeit.co/now#) instance. _8-bit Trip_ is al
 [![Build Status][travis-badge]][travis-url]
 [![Coverage Status][coverage-badge]][coverage-url]
 [![Dependency Status][david-badge]][david-url]
-[![Maintenance](https://img.shields.io/maintenance/yes/2018.svg?maxAge=2592000)]()
+[![Maintenance](https://img.shields.io/maintenance/yes/2019.svg?maxAge=2592000)]()
 
 Run locally with:
 
