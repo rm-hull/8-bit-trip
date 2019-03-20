@@ -31,6 +31,7 @@ gulp.task("lint", function() {
     .pipe(eslint.failAfterError());
 });
 
+
 gulp.task("coverage", function() {
   return gulp.src(config.src)
     .pipe(istanbul({
@@ -51,4 +52,4 @@ gulp.task("build", function () {
     .pipe(gulp.dest("dist"));
 });
 
-gulp.task("default", ["coverage"]);
+gulp.task("default", gulp.series("test"));
