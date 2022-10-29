@@ -1,18 +1,35 @@
-import "./App.css";
-import logo from "./logo.svg";
+import { Route, Routes, useParams } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
+    <Routes>
+      <Route
+        path="/about"
+        element={
+          <div>
+            <h3>About page</h3>
+          </div>
+        }
+      />
+      <Route
+        path="/"
+        element={
+          <div>
+            <h3>Home page</h3>
+          </div>
+        }
+      />
+      <Route path="/:id" element={<Child />} />
+    </Routes>
+  );
+}
+
+function Child() {
+  const { id } = useParams();
+
+  return (
+    <div>
+      <h3>ID: {id}</h3>
     </div>
   );
 }
