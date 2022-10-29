@@ -1,3 +1,0 @@
---compilers js:@babel/register
---check-leaks
---recursive
