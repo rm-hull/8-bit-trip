@@ -2,6 +2,8 @@
   "name": "8-bit-trip",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
+  "homepage": "https://destructuring-bind.org/8-bit-trip",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
