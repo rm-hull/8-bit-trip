@@ -1,6 +1,7 @@
-import { Route, Routes, useParams } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
 
-function App() {
+export default function App() {
   return (
     <Routes>
       <Route
@@ -11,27 +12,7 @@ function App() {
           </div>
         }
       />
-      <Route
-        path="/"
-        element={
-          <div>
-            <h3>Home page</h3>
-          </div>
-        }
-      />
-      <Route path="/:id" element={<Child />} />
+      <Route path="/" element={<Home />} />
     </Routes>
   );
 }
-
-function Child() {
-  const { id } = useParams();
-
-  return (
-    <div>
-      <h3>ID: {id}</h3>
-    </div>
-  );
-}
-
-export default App;
