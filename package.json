@@ -5,8 +5,14 @@
   "license": "MIT",
   "homepage": "https://destructuring-bind.org/8-bit-trip",
   "dependencies": {
+    "@chakra-ui/react": "^2.3.6",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "clsx": "^1.2.1",
+    "framer-motion": "^7.6.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.6.0",
     "react-router-dom": "^6.4.2",
     "web-vitals": "^3.0.4"
   },
