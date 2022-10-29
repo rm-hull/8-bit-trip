@@ -1,16 +1,23 @@
+import { VStack } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
-import AudioVisualizer from "./AudioVisualizer";
+import { frequencyBars } from "../visualizations/frequencyBars";
+import { sineWave } from "../visualizations/sineWave";
+import Visualizer from "./AudioVisualizer";
 
 type AudioAnalyzerProps = {
   audioStream: MediaStream;
+  fftSize?: number;
 };
 
-export default function AudioAnalyzer({ audioStream }: AudioAnalyzerProps): JSX.Element {
-  const [audioData, setAudioData] = useState<Uint8Array>(new Uint8Array(0));
+export default function AudioAnalyzer({ audioStream, fftSize = 256 }: AudioAnalyzerProps): JSX.Element {
+  const [waveformData, setWaveformData] = useState<Uint8Array>(new Uint8Array(0));
+  const [frequencyData, setFrequencyData] = useState<Uint8Array>(new Uint8Array(0));
 
   useEffect(() => {
     const audioContext = new window.AudioContext();
     const analyzer = audioContext.createAnalyser();
+    analyzer.fftSize = fftSize;
+
     const source = audioContext.createMediaStreamSource(audioStream);
     source.connect(analyzer);
 
@@ -19,7 +26,12 @@ export default function AudioAnalyzer({ audioStream }: AudioAnalyzerProps): JSX.
     const tick = () => {
       const dataArray = new Uint8Array(analyzer.frequencyBinCount);
       analyzer.getByteTimeDomainData(dataArray);
-      setAudioData(dataArray);
+      setWaveformData(dataArray);
+
+      const frequenciesArray = new Uint8Array(analyzer.fftSize);
+      analyzer.getByteFrequencyData(frequenciesArray);
+      setFrequencyData(frequenciesArray);
+
       rafId = requestAnimationFrame(tick);
     };
 
@@ -30,9 +42,14 @@ export default function AudioAnalyzer({ audioStream }: AudioAnalyzerProps): JSX.
       source.disconnect();
       cancelAnimationFrame(rafId);
     };
-  }, [audioStream]);
+  }, [audioStream, fftSize]);
 
-  return <AudioVisualizer audioData={audioData} />;
+  return (
+    <VStack>
+      <Visualizer width={800} audioData={waveformData} frequencies={frequencyData} draw={sineWave} />;
+      <Visualizer width={800} audioData={waveformData} frequencies={frequencyData} draw={frequencyBars} />;
+    </VStack>
+  );
 }
 
 // adapted from: https://github.com/philnash/react-web-audio/blob/master/src/AudioAnalyser.js
