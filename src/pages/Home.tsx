@@ -4,16 +4,22 @@ import { FiPlay, FiSquare } from "react-icons/fi";
 import AudioAnalyzer from "../components/AudioAnalyzer";
 
 async function playNoise(context: AudioContext): Promise<AudioWorkletNode> {
-  await context.audioWorklet.addModule("8-bit-trip/js/audio-processor.js");
+  try {
+    await context.audioWorklet.addModule("js/audio-processor.js");
+  } catch (err: unknown) {
+    // eslint-disable-next-line no-console
+    console.warn("Failed to load audio-worklet, trying dev fallback...", { err });
+    await context.audioWorklet.addModule("8-bit-trip/js/audio-processor.js");
+  }
   const audioNode = new AudioWorkletNode(context, "audio-processor");
   audioNode.connect(context.destination);
   return audioNode;
 }
 
 export default function Home(): JSX.Element {
-  const [audio, setAudio] = useState<MediaStream | null>(null);
-  const [node, setNode] = useState<AudioWorkletNode | null>(null);
-  const isPlaying = !!audio;
+  const [audio, setAudio] = useState<MediaStream>();
+  const [node, setNode] = useState<AudioWorkletNode>();
+  const isPlaying = !!node;
 
   const start = async () => {
     const context = new AudioContext();
@@ -27,8 +33,7 @@ export default function Home(): JSX.Element {
 
   const stop = () => {
     node?.disconnect();
-    audio?.getTracks().forEach((track) => track.stop());
-    setAudio(null);
+    setNode(undefined);
   };
 
   const toggle = async () => {
@@ -46,7 +51,7 @@ export default function Home(): JSX.Element {
           {isPlaying ? "Stop" : "Start"}
         </Button>
       </ButtonGroup>
-      {isPlaying ? <AudioAnalyzer audioStream={audio} /> : undefined}
+      {audio && <AudioAnalyzer audioStream={audio} />}
     </Container>
   );
 }
