@@ -17,14 +17,18 @@ async function playNoise(context: AudioContext): Promise<AudioWorkletNode> {
 }
 
 export default function Home(): JSX.Element {
+  const [context, setContext] = useState<AudioContext>();
   const [audio, setAudio] = useState<MediaStream>();
   const [node, setNode] = useState<AudioWorkletNode>();
   const isPlaying = !!node;
+  const sampleRate = 8000;
 
   const start = async () => {
-    const context = new AudioContext();
-    const node = await playNoise(context);
-    const streamNode = context.createMediaStreamDestination();
+    const ctx = new AudioContext({ sampleRate });
+    setContext(ctx);
+
+    const node = await playNoise(ctx);
+    const streamNode = ctx.createMediaStreamDestination();
     node.connect(streamNode);
 
     setAudio(streamNode.stream);
@@ -51,7 +55,7 @@ export default function Home(): JSX.Element {
           {isPlaying ? "Stop" : "Start"}
         </Button>
       </ButtonGroup>
-      {audio && <AudioAnalyzer audioStream={audio} />}
+      {audio && context && <AudioAnalyzer context={context} audioStream={audio} />}
     </Container>
   );
 }

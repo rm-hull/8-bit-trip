@@ -5,20 +5,20 @@ import { sineWave } from "../visualizations/sineWave";
 import Visualizer from "./AudioVisualizer";
 
 type AudioAnalyzerProps = {
+  context: AudioContext;
   audioStream: MediaStream;
   fftSize?: number;
 };
 
-export default function AudioAnalyzer({ audioStream, fftSize = 256 }: AudioAnalyzerProps): JSX.Element {
+export default function AudioAnalyzer({ context, audioStream, fftSize = 256 }: AudioAnalyzerProps): JSX.Element {
   const [waveformData, setWaveformData] = useState<Uint8Array>(new Uint8Array(0));
   const [frequencyData, setFrequencyData] = useState<Uint8Array>(new Uint8Array(0));
 
   useEffect(() => {
-    const audioContext = new window.AudioContext();
-    const analyzer = audioContext.createAnalyser();
+    const analyzer = context.createAnalyser();
     analyzer.fftSize = fftSize;
 
-    const source = audioContext.createMediaStreamSource(audioStream);
+    const source = context.createMediaStreamSource(audioStream);
     source.connect(analyzer);
 
     let rafId: number;
@@ -42,7 +42,7 @@ export default function AudioAnalyzer({ audioStream, fftSize = 256 }: AudioAnaly
       source.disconnect();
       cancelAnimationFrame(rafId);
     };
-  }, [audioStream, fftSize]);
+  }, [audioStream, context, fftSize]);
 
   return (
     <VStack>
