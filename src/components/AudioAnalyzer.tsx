@@ -48,7 +48,7 @@ export default function AudioAnalyzer({ context, audioStream, fftSize = 256 }: A
     <VStack>
       <Visualizer width={800} audioData={waveformData} frequencies={frequencyData} draw={sineWave} />;
       <Visualizer width={800} audioData={waveformData} frequencies={frequencyData} draw={frequencyBars} />;
-      <Container>Time: {context.currentTime}</Container>
+      <Container>Time: {context.currentTime.toFixed(1)}</Container>
     </VStack>
   );
 }
