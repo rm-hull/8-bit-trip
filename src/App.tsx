@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 
 export default function App() {
@@ -12,7 +12,16 @@ export default function App() {
           </div>
         }
       />
-      <Route path="/" element={<Home />} />
+      <Route
+        path="/"
+        element={
+          <Navigate
+            to="/eyJzYW1wbGVSYXRlIjo4MDAwLCJhbGdvcml0aG0iOiIoKDEtKCgodCsxMCk%2BPigodD4%2BOSkmKCh0Pj4xNCkpKSkmKHQ%2BPjQmLTIpKSkqMikqKCgodD4%2BMTApXigodCsoKHQ%2BPjYpJjEyNykpPj4xMCkpJjEpKjMyKzEyOCJ9"
+            replace
+          />
+        }
+      />
+      <Route path="/:code" element={<Home />} />
     </Routes>
   );
 }
