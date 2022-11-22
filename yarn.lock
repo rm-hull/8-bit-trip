@@ -37,7 +37,7 @@ __metadata:
     eslint-plugin-react-hooks: ^4.6.0
     eslint-plugin-testing-library: ^5.9.1
     formik: ^2.2.9
-    framer-motion: ^7.6.5
+    framer-motion: ^7.6.9
     prettier: ^2.7.1
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -7937,9 +7937,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"framer-motion@npm:^7.6.5":
-  version: 7.6.5
-  resolution: "framer-motion@npm:7.6.5"
+"framer-motion@npm:^7.6.9":
+  version: 7.6.9
+  resolution: "framer-motion@npm:7.6.9"
   dependencies:
     "@emotion/is-prop-valid": ^0.8.2
     "@motionone/dom": 10.13.1
@@ -7954,7 +7954,7 @@ __metadata:
   dependenciesMeta:
     "@emotion/is-prop-valid":
       optional: true
-  checksum: d9a288e009c6b0a7ab8f8d8d6761da2335697468863d5eceaa2cf09ded8f016690b6c7b3fa683f9d14c9bd50dc57c0586fd5c2063d5851520f6982669ad93a65
+  checksum: db7f86add0873096cf86a4605247560f7a2ef3e8c9ff4524ec7ec7aec74129ad52cd7283c4446aba53f5de89fc8ba70fc4b78c8325ca0622083c6090834ce518
   languageName: node
   linkType: hard
 
