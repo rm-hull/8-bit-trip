@@ -5,7 +5,7 @@
   "license": "MIT",
   "homepage": "https://destructuring-bind.org/8-bit-trip",
   "dependencies": {
-    "@chakra-ui/react": "^2.3.7",
+    "@chakra-ui/react": "^2.4.8",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "clsx": "^1.2.1",
