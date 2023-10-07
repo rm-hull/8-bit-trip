@@ -4,4 +4,6 @@ _8-bit Trip_ is a react app port of [sound-flour](https://github.com/rm-hull/sou
 deployed onto a github pages site. _8-bit Trip_ is also an
 [awesome song](https://www.youtube.com/watch?v=4qsWFFuYZYI) by **Rymdreglage**.
 
-v2 COMING SOON
+v2 COMING SOON:
+
+![web-app](./doc/screenshot/web_app.png)
