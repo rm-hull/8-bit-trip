@@ -17,7 +17,7 @@ __metadata:
     "@testing-library/user-event": ^14.6.1
     "@types/jest": ^29.5.13
     "@types/node": ^24.10.1
-    "@types/object-hash": ^2.2.1
+    "@types/object-hash": ^3.0.6
     "@types/react": ^18.0.25
     "@types/react-dom": ^18.0.8
     "@typescript-eslint/eslint-plugin": ^5.42.1
@@ -4715,10 +4715,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/object-hash@npm:^2.2.1":
-  version: 2.2.1
-  resolution: "@types/object-hash@npm:2.2.1"
-  checksum: bbcbf076903e11fa6d61dd5cc365bce2b080b18502ef52672a427443262e465d7b46b8f2821e8cea0307de66aee2eb92ad6e2bed2346acd7c8de118d4123fe3a
+"@types/object-hash@npm:^3.0.6":
+  version: 3.0.6
+  resolution: "@types/object-hash@npm:3.0.6"
+  checksum: 2c7979d4e540af817b99c09fb4c2fed1c0b0e14342df474d8dcde4165a82c440b038341fd66fe998d9f86acdd5cccc65ba8092315e39e7c2114f945fa70aaa56
   languageName: node
   linkType: hard
 
