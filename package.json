@@ -6,7 +6,7 @@
   "homepage": "https://destructuring-bind.org/8-bit-trip",
   "dependencies": {
     "@chakra-ui/react": "^2.3.7",
-    "@emotion/react": "^11.10.5",
+    "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.10.5",
     "clsx": "^2.1.1",
     "formik": "^2.4.9",
