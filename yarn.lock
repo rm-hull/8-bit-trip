@@ -32,7 +32,7 @@ __metadata:
     eslint-plugin-jsx-a11y: ^6.10.2
     eslint-plugin-node: ^11.1.0
     eslint-plugin-prettier: ^5.5.4
-    eslint-plugin-promise: ^6.1.1
+    eslint-plugin-promise: ^7.2.1
     eslint-plugin-react: ^7.37.5
     eslint-plugin-react-hooks: ^7.0.1
     eslint-plugin-testing-library: ^7.13.5
@@ -3264,7 +3264,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint-community/eslint-utils@npm:^4.7.0, @eslint-community/eslint-utils@npm:^4.8.0":
+"@eslint-community/eslint-utils@npm:^4.4.0, @eslint-community/eslint-utils@npm:^4.7.0, @eslint-community/eslint-utils@npm:^4.8.0":
   version: 4.9.0
   resolution: "@eslint-community/eslint-utils@npm:4.9.0"
   dependencies:
@@ -8742,12 +8742,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-promise@npm:^6.1.1":
-  version: 6.1.1
-  resolution: "eslint-plugin-promise@npm:6.1.1"
+"eslint-plugin-promise@npm:^7.2.1":
+  version: 7.2.1
+  resolution: "eslint-plugin-promise@npm:7.2.1"
+  dependencies:
+    "@eslint-community/eslint-utils": ^4.4.0
   peerDependencies:
-    eslint: ^7.0.0 || ^8.0.0
-  checksum: 46b9a4f79dae5539987922afc27cc17cbccdecf4f0ba19c0ccbf911b0e31853e9f39d9959eefb9637461b52772afa1a482f1f87ff16c1ba38bdb6fcf21897e9a
+    eslint: ^7.0.0 || ^8.0.0 || ^9.0.0
+  checksum: 9101a93efd79f5202d0239d7666935c1d5655f64f4527cea6e82e1438b4de4304351de60f2c26201289a22eed1da4b3a21e7996fa3268b9943b98d12c80b2030
   languageName: node
   linkType: hard
 
