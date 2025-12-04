@@ -10,7 +10,7 @@
     "@emotion/styled": "^11.14.1",
     "clsx": "^2.1.1",
     "formik": "^2.4.9",
-    "framer-motion": "^7.6.5",
+    "framer-motion": "^12.23.25",
     "react": "^19.2.1",
     "react-dom": "^18.2.0",
     "react-error-boundary": "^6.0.0",
