@@ -46,8 +46,8 @@ export function AudioAnalyzer({ context, audioStream, fftSize = 256 }: AudioAnal
 
   return (
     <VStack>
-      <Visualizer width={800} audioData={waveformData} frequencies={frequencyData} draw={sineWave} />;
-      <Visualizer width={800} audioData={waveformData} frequencies={frequencyData} draw={frequencyBars} />;
+      <Visualizer width={800} audioData={waveformData} frequencies={frequencyData} draw={sineWave} />
+      <Visualizer width={800} audioData={waveformData} frequencies={frequencyData} draw={frequencyBars} />
       <Container>
         Time: <Span fontFamily="mono"> {context.currentTime.toFixed(3)} s</Span>
       </Container>

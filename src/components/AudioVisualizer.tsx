@@ -16,7 +16,7 @@ export function Visualizer({ audioData, frequencies, draw, width = 300, height =
     }
   }, [audioData, draw, frequencies]);
 
-  return <canvas width={width} height={height} ref={ref} />;
+  return <canvas width={width} height={height} ref={ref} />
 }
 
 // adapted from: https://github.com/philnash/react-web-audio/blob/master/src/AudioVisualiser.js
