@@ -10,7 +10,7 @@ type AudioAnalyzerProps = {
   fftSize?: number;
 };
 
-export default function AudioAnalyzer({ context, audioStream, fftSize = 256 }: AudioAnalyzerProps): JSX.Element {
+export default function AudioAnalyzer({ context, audioStream, fftSize = 256 }: AudioAnalyzerProps) {
   const [waveformData, setWaveformData] = useState<Uint8Array>(new Uint8Array(0));
   const [frequencyData, setFrequencyData] = useState<Uint8Array>(new Uint8Array(0));
 

@@ -1,19 +1,16 @@
-import { ReportHandler } from "web-vitals";
+import { Metric } from "web-vitals";
 
-const reportWebVitals = (onPerfEntry?: ReportHandler): void => {
+export const reportWebVitals = (onPerfEntry?: (metric: Metric) => void): void => {
   if (onPerfEntry && onPerfEntry instanceof Function) {
     import("web-vitals")
-      .then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-        getCLS(onPerfEntry);
-        getFID(onPerfEntry);
-        getFCP(onPerfEntry);
-        getLCP(onPerfEntry);
-        getTTFB(onPerfEntry);
+      .then(({ onCLS, onINP, onFCP, onLCP, onTTFB }) => {
+        onCLS(onPerfEntry);
+        onINP(onPerfEntry);
+        onFCP(onPerfEntry);
+        onLCP(onPerfEntry);
+        onTTFB(onPerfEntry);
         return null;
       })
-      // eslint-disable-next-line no-console
       .catch(console.error);
   }
 };
-
-export default reportWebVitals;

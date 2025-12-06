@@ -5,7 +5,7 @@ import { ErrorBoundary } from "react-error-boundary";
 import { BrowserRouter as Router } from "react-router-dom";
 import App from "./App";
 import ErrorFallback from "./components/ErrorFallback";
-import "./index.css";
+import "./main.css";
 
 const manager = createLocalStorageManager("8-bit-trip.color-mode");
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);

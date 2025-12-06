@@ -14,7 +14,7 @@ export default function Visualizer({
   draw,
   width = 300,
   height = 300,
-}: VisualizerProps): JSX.Element {
+}: VisualizerProps) {
   const ref = createRef<HTMLCanvasElement>();
   useEffect(() => draw(ref.current!, audioData, frequencies), [audioData, draw, frequencies, ref]);
 

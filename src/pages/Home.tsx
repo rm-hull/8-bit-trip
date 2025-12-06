@@ -32,7 +32,7 @@ function replaceCode(pathname: string, formData: FormData): string {
   return pathname;
 }
 
-export default function Home(): JSX.Element {
+export default function Home() {
   const { code } = useParams();
   const { algorithm, sampleRate } = JSON.parse(decodeURIComponent(window.atob(code ?? "")));
   const [formData, setFormData] = useState<FormData>({ algorithm, sampleRate });

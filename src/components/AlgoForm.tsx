@@ -10,7 +10,7 @@ type FormProps = Partial<FormData> & {
   onUpdate(form: FormData): void;
 };
 
-export default function AlgoForm({ sampleRate, algorithm, onUpdate }: FormProps): JSX.Element {
+export default function AlgoForm({ sampleRate, algorithm, onUpdate }: FormProps) {
   const handleUpdate = (form: FormData, actions: FormikHelpers<FormData>) => {
     onUpdate(form);
     actions.setSubmitting(false);

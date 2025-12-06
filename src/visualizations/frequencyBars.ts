@@ -1,4 +1,4 @@
-export function frequencyBars(canvas: HTMLCanvasElement, data: Uint8Array, freq: Uint8Array) {
+export function frequencyBars(canvas: HTMLCanvasElement, _data: Uint8Array, freq: Uint8Array) {
   const height = canvas.height;
   const width = canvas.width;
 
