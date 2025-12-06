@@ -8,13 +8,7 @@ type VisualizerProps = {
   draw: (canvas: HTMLCanvasElement, data: Uint8Array, frequencies: Uint8Array) => void;
 };
 
-export default function Visualizer({
-  audioData,
-  frequencies,
-  draw,
-  width = 300,
-  height = 300,
-}: VisualizerProps) {
+export default function Visualizer({ audioData, frequencies, draw, width = 300, height = 300 }: VisualizerProps) {
   const ref = createRef<HTMLCanvasElement>();
   useEffect(() => draw(ref.current!, audioData, frequencies), [audioData, draw, frequencies, ref]);
 
