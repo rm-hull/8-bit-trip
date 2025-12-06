@@ -1,4 +1,4 @@
-import { createRef, useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 type VisualizerProps = {
   audioData: Uint8Array;
@@ -9,8 +9,12 @@ type VisualizerProps = {
 };
 
 export function Visualizer({ audioData, frequencies, draw, width = 300, height = 300 }: VisualizerProps) {
-  const ref = createRef<HTMLCanvasElement>();
-  useEffect(() => draw(ref.current!, audioData, frequencies), [audioData, draw, frequencies, ref]);
+  const ref = useRef<HTMLCanvasElement>(null);
+  useEffect(() => {
+    if (ref.current) {
+      draw(ref.current, audioData, frequencies);
+    }
+  }, [audioData, draw, frequencies]);
 
   return <canvas width={width} height={height} ref={ref} />;
 }
