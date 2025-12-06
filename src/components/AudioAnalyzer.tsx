@@ -1,4 +1,4 @@
-import { Container, VStack } from "@chakra-ui/react";
+import { Container, Span, VStack } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { frequencyBars } from "../visualizations/frequencyBars";
 import { sineWave } from "../visualizations/sineWave";
@@ -48,7 +48,9 @@ export function AudioAnalyzer({ context, audioStream, fftSize = 256 }: AudioAnal
     <VStack>
       <Visualizer width={800} audioData={waveformData} frequencies={frequencyData} draw={sineWave} />;
       <Visualizer width={800} audioData={waveformData} frequencies={frequencyData} draw={frequencyBars} />;
-      <Container>Time: {context.currentTime.toFixed(1)}</Container>
+      <Container>
+        Time: <Span fontFamily="mono"> {context.currentTime.toFixed(3)} s</Span>
+      </Container>
     </VStack>
   );
 }

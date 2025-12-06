@@ -32,7 +32,7 @@ export function AlgoForm({ sampleRate, algorithm, onUpdate }: FormProps) {
                   invalid={form.errors.sampleRate !== undefined && !!form.touched.sampleRate}
                 >
                   <NativeSelect.Root size="sm">
-                    <NativeSelect.Field {...field} onBlur={void form.submitForm}>
+                    <NativeSelect.Field {...field} onBlur={form.submitForm}>
                       <option value={8000}>8000 Hz</option>
                       <option value={16000}>16000 Hz</option>
                       <option value={32000}>32000 Hz</option>
@@ -46,7 +46,7 @@ export function AlgoForm({ sampleRate, algorithm, onUpdate }: FormProps) {
             <Field name="algorithm">
               {({ field, form }: FieldProps) => (
                 <ChakraField.Root flex={1} invalid={form.errors.algorithm !== undefined && !!form.touched.algorithm}>
-                  <Input {...field} size="sm" onBlur={void form.submitForm} />
+                  <Input {...field} size="sm" onBlur={form.submitForm} />
                   {/* <ChakraField.ErrorText>{form.errors.algorithm}</ChakraField.ErrorText> */}
                 </ChakraField.Root>
               )}

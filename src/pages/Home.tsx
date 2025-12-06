@@ -1,4 +1,4 @@
-import { Box, Button, ButtonGroup, Clipboard, Flex, IconButton } from "@chakra-ui/react";
+import { Box, Button, Clipboard, Flex, IconButton } from "@chakra-ui/react";
 import { useCallback, useState } from "react";
 import { FiCheck, FiClipboard, FiPlay, FiSquare } from "react-icons/fi";
 import { AlgoForm, FormData } from "../components/AlgoForm";
@@ -49,6 +49,7 @@ export function Home({ code }: HomeProps) {
     const ctx = new AudioContext({ sampleRate: formData.sampleRate });
     setContext(ctx);
 
+    console.log("start: ", formData?.algorithm);
     const node = await playNoise(ctx, formData?.algorithm);
     const streamNode = ctx.createMediaStreamDestination();
     node.connect(streamNode);
@@ -60,7 +61,8 @@ export function Home({ code }: HomeProps) {
   const stop = useCallback(() => {
     node?.disconnect();
     setNode(undefined);
-  }, [node]);
+    void context?.close()
+  }, [node, context]);
 
   const toggle = useCallback(() => {
     if (isPlaying) {
@@ -72,9 +74,12 @@ export function Home({ code }: HomeProps) {
 
   const handleUpdate = useCallback(
     (data: FormData) => {
+      console.log("handleUpdate:", data.algorithm);
       setFormData(data);
-      if (isPlaying) stop();
-      void start();
+      if (isPlaying) {
+        stop();
+        void start();
+      }
     },
     [isPlaying, start, stop]
   );
@@ -82,12 +87,10 @@ export function Home({ code }: HomeProps) {
   return (
     <Box>
       <Flex m={3} gap={2}>
-        <ButtonGroup size="sm" attached variant="surface">
-          <Button onClick={toggle}>
-            {isPlaying ? <FiSquare /> : <FiPlay />}
-            {isPlaying ? "Stop" : "Start"}
-          </Button>
-        </ButtonGroup>
+        <Button size="sm" variant="surface" onClick={toggle} width="90px">
+          {isPlaying ? <FiSquare color="red" /> : <FiPlay color="green" />}
+          {isPlaying ? "Stop" : "Start"}
+        </Button>
 
         <Box flex={1}>
           <AlgoForm algorithm={formData.algorithm} sampleRate={formData.sampleRate} onUpdate={handleUpdate} />
