@@ -49,7 +49,6 @@ export function Home({ code }: HomeProps) {
     const ctx = new AudioContext({ sampleRate: formData.sampleRate });
     setContext(ctx);
 
-    console.log("start: ", formData?.algorithm);
     const node = await playNoise(ctx, formData?.algorithm);
     const streamNode = ctx.createMediaStreamDestination();
     node.connect(streamNode);
@@ -61,7 +60,7 @@ export function Home({ code }: HomeProps) {
   const stop = useCallback(() => {
     node?.disconnect();
     setNode(undefined);
-    void context?.close()
+    void context?.close();
   }, [node, context]);
 
   const toggle = useCallback(() => {
@@ -74,7 +73,6 @@ export function Home({ code }: HomeProps) {
 
   const handleUpdate = useCallback(
     (data: FormData) => {
-      console.log("handleUpdate:", data.algorithm);
       setFormData(data);
       if (isPlaying) {
         stop();

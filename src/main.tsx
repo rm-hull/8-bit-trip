@@ -1,8 +1,6 @@
-import { ErrorFallback } from "@rm-hull/chakra-error-fallback";
 import { RouterProvider, createRouter } from "@tanstack/react-router";
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { ErrorBoundary } from "react-error-boundary";
 import { Provider } from "@/components/ui/provider";
 import "./main.css";
 import { routeTree } from "./routeTree.gen";
@@ -24,9 +22,7 @@ const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement)
 root.render(
   <React.StrictMode>
     <Provider>
-      <ErrorBoundary FallbackComponent={ErrorFallback}>
-        <RouterProvider router={router} />
-      </ErrorBoundary>
+      <RouterProvider router={router} />
     </Provider>
   </React.StrictMode>
 );

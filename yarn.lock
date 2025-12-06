@@ -58,7 +58,6 @@ __metadata:
     prettier: "npm:^3.7.4"
     react: "npm:^19.2.1"
     react-dom: "npm:^19.2.1"
-    react-error-boundary: "npm:^6.0.0"
     react-icons: "npm:^5.5.0"
     typescript: "npm:^5.9.3"
     typescript-eslint: "npm:^8.48.1"
@@ -9154,17 +9153,6 @@ __metadata:
   peerDependencies:
     react: ^19.2.1
   checksum: 10/cceea7104bd3ad52e2f6377f47c4b346244c1263917fd95745e31647ff8ab23b16f719c2bfc8bcf2a6c802ecb9c9e81f08b09e3447e1f49bc27368283ed299ba
-  languageName: node
-  linkType: hard
-
-"react-error-boundary@npm:^6.0.0":
-  version: 6.0.0
-  resolution: "react-error-boundary@npm:6.0.0"
-  dependencies:
-    "@babel/runtime": "npm:^7.12.5"
-  peerDependencies:
-    react: ">=16.13.1"
-  checksum: 10/3de587be3e72bd3e32b3bd7769d09354b27ed94be580f33a80a85ddc8c1d1ed1cad90199bc24b22a7911ef1ebacc0163c664b2c395f7c37ffd493f59e6e5c9f9
   languageName: node
   linkType: hard
 
