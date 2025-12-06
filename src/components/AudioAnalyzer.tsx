@@ -2,7 +2,7 @@ import { Container, VStack } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { frequencyBars } from "../visualizations/frequencyBars";
 import { sineWave } from "../visualizations/sineWave";
-import Visualizer from "./AudioVisualizer";
+import { Visualizer } from "./AudioVisualizer";
 
 type AudioAnalyzerProps = {
   context: AudioContext;

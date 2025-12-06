@@ -4,7 +4,7 @@ import ReactDOM from "react-dom/client";
 import { ErrorBoundary } from "react-error-boundary";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Provider } from "@/components/ui/provider";
-import App from "./App";
+import { App } from "./App";
 import "./main.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
