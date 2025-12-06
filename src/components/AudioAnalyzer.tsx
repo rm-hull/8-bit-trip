@@ -2,7 +2,7 @@ import { Container, VStack } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { frequencyBars } from "../visualizations/frequencyBars";
 import { sineWave } from "../visualizations/sineWave";
-import Visualizer from "./AudioVisualizer";
+import { Visualizer } from "./AudioVisualizer";
 
 type AudioAnalyzerProps = {
   context: AudioContext;
@@ -10,7 +10,7 @@ type AudioAnalyzerProps = {
   fftSize?: number;
 };
 
-export default function AudioAnalyzer({ context, audioStream, fftSize = 256 }: AudioAnalyzerProps) {
+export function AudioAnalyzer({ context, audioStream, fftSize = 256 }: AudioAnalyzerProps) {
   const [waveformData, setWaveformData] = useState<Uint8Array>(new Uint8Array(0));
   const [frequencyData, setFrequencyData] = useState<Uint8Array>(new Uint8Array(0));
 

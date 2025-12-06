@@ -1,15 +1,14 @@
-import { Box, Button, ButtonGroup, Flex, IconButton, Tooltip, useClipboard } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
+import { Box, Button, ButtonGroup, Clipboard, Flex, IconButton } from "@chakra-ui/react";
+import { useCallback, useState } from "react";
 import { FiCheck, FiClipboard, FiPlay, FiSquare } from "react-icons/fi";
 import { useParams } from "react-router-dom";
-import AlgoForm, { FormData } from "../components/AlgoForm";
-import AudioAnalyzer from "../components/AudioAnalyzer";
+import { AlgoForm, FormData } from "../components/AlgoForm";
+import { AudioAnalyzer } from "../components/AudioAnalyzer";
 
 async function playNoise(context: AudioContext, algorithm: string): Promise<AudioWorkletNode> {
   try {
     await context.audioWorklet.addModule("js/audio-processor.js");
   } catch (err: unknown) {
-     
     console.warn("Failed to load audio-worklet, trying dev fallback...", { err });
     await context.audioWorklet.addModule("8-bit-trip/js/audio-processor.js");
   }
@@ -32,21 +31,19 @@ function replaceCode(pathname: string, formData: FormData): string {
   return pathname;
 }
 
-export default function Home() {
+export function Home() {
   const { code } = useParams();
-  const { algorithm, sampleRate } = JSON.parse(decodeURIComponent(window.atob(code ?? "")));
+  const { algorithm, sampleRate } = JSON.parse(decodeURIComponent(window.atob(code ?? ""))) as FormData;
   const [formData, setFormData] = useState<FormData>({ algorithm, sampleRate });
   const [context, setContext] = useState<AudioContext>();
   const [audio, setAudio] = useState<MediaStream>();
   const [node, setNode] = useState<AudioWorkletNode>();
 
-  const { hasCopied, onCopy, setValue } = useClipboard("");
   const url = replaceCode(window.location.href, formData);
-  useEffect(() => setValue(url), [setValue, url]);
 
   const isPlaying = !!node;
 
-  const start = async () => {
+  const start = useCallback(async () => {
     const ctx = new AudioContext({ sampleRate: formData.sampleRate });
     setContext(ctx);
 
@@ -56,50 +53,53 @@ export default function Home() {
 
     setAudio(streamNode.stream);
     setNode(node);
-  };
+  }, [formData.algorithm, formData.sampleRate]);
 
-  const stop = () => {
+  const stop = useCallback(() => {
     node?.disconnect();
     setNode(undefined);
-  };
+  }, [node]);
 
-  const toggle = () => {
+  const toggle = useCallback(() => {
     if (isPlaying) {
       stop();
     } else {
       void start();
     }
-  };
+  }, [isPlaying, start, stop]);
+
+  const handleUpdate = useCallback(
+    (data: FormData) => {
+      setFormData(data);
+      if (isPlaying) stop();
+      void start();
+    },
+    [isPlaying, start, stop]
+  );
 
   return (
     <Box>
-      <Flex m={3}>
-        <ButtonGroup m={1} size="sm" isAttached variant="outline">
-          <Button leftIcon={isPlaying ? <FiSquare /> : <FiPlay />} onClick={toggle}>
+      <Flex m={3} gap={2}>
+        <ButtonGroup size="sm" attached variant="surface">
+          <Button onClick={toggle}>
+            {isPlaying ? <FiSquare /> : <FiPlay />}
             {isPlaying ? "Stop" : "Start"}
           </Button>
         </ButtonGroup>
 
-        <Box flex={1} m={1}>
-          <AlgoForm
-            algorithm={formData.algorithm}
-            sampleRate={formData.sampleRate}
-            onUpdate={(data) => {
-              setFormData(data);
-              if (isPlaying) stop();
-              void start();
-            }}
-          />
+        <Box flex={1}>
+          <AlgoForm algorithm={formData.algorithm} sampleRate={formData.sampleRate} onUpdate={handleUpdate} />
         </Box>
-        <Box m={1}>
-          <Tooltip label="Copy URL to Clipboard">
-            <IconButton
-              size="sm"
-              onClick={onCopy}
-              aria-label="Copy URL to clipboardx"
-              icon={hasCopied ? <FiCheck color="green" /> : <FiClipboard />}
-            />
-          </Tooltip>
+        <Box>
+          <Clipboard.Root value={url}>
+            <Clipboard.Trigger asChild>
+              <IconButton size="sm" variant="surface" aria-label="Copy URL to clipboard">
+                <Clipboard.Indicator copied={<FiCheck color="green" />}>
+                  <FiClipboard />
+                </Clipboard.Indicator>
+              </IconButton>
+            </Clipboard.Trigger>
+          </Clipboard.Root>
         </Box>
       </Flex>
 
