@@ -4,6 +4,7 @@
   "private": true,
   "license": "MIT",
   "homepage": "https://destructuring-bind.org/8-bit-trip",
+  "type": "module",
   "dependencies": {
     "@chakra-ui/react": "^2.10.9",
     "@emotion/react": "^11.14.0",

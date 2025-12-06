@@ -5,7 +5,7 @@ type VisualizerProps = {
   frequencies: Uint8Array;
   width?: number | string;
   height?: number | string;
-  draw(canvas: HTMLCanvasElement, data: Uint8Array, frequencies: Uint8Array): void;
+  draw: (canvas: HTMLCanvasElement, data: Uint8Array, frequencies: Uint8Array) => void;
 };
 
 export default function Visualizer({

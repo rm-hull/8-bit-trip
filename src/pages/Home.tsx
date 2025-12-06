@@ -9,7 +9,7 @@ async function playNoise(context: AudioContext, algorithm: string): Promise<Audi
   try {
     await context.audioWorklet.addModule("js/audio-processor.js");
   } catch (err: unknown) {
-    // eslint-disable-next-line no-console
+     
     console.warn("Failed to load audio-worklet, trying dev fallback...", { err });
     await context.audioWorklet.addModule("8-bit-trip/js/audio-processor.js");
   }
@@ -63,11 +63,11 @@ export default function Home() {
     setNode(undefined);
   };
 
-  const toggle = async () => {
+  const toggle = () => {
     if (isPlaying) {
       stop();
     } else {
-      start();
+      void start();
     }
   };
 
@@ -87,7 +87,7 @@ export default function Home() {
             onUpdate={(data) => {
               setFormData(data);
               if (isPlaying) stop();
-              start();
+              void start();
             }}
           />
         </Box>

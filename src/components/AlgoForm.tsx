@@ -27,7 +27,7 @@ export default function AlgoForm({ sampleRate, algorithm, onUpdate }: FormProps)
                   mr={2}
                   isInvalid={form.errors.sampleRate !== undefined && !!form.touched.sampleRate}
                 >
-                  <Select {...field} size="sm" onBlur={form.submitForm}>
+                  <Select {...field} size="sm" onBlur={void form.submitForm}>
                     <option value={8000}>8000 Hz</option>
                     <option value={16000}>16000 Hz</option>
                     <option value={32000}>32000 Hz</option>
@@ -40,7 +40,7 @@ export default function AlgoForm({ sampleRate, algorithm, onUpdate }: FormProps)
             <Field name="algorithm">
               {({ field, form }: FieldProps) => (
                 <FormControl flex={1} isInvalid={form.errors.sampleRate !== undefined && !!form.touched.sampleRate}>
-                  <Input {...field} size="sm" onBlur={form.submitForm} />
+                  <Input {...field} size="sm" onBlur={void form.submitForm} />
                   {/* <FormErrorMessage>{form.errors.algorithm}</FormErrorMessage> */}
                 </FormControl>
               )}
