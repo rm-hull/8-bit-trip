@@ -1,21 +1,32 @@
 import { ErrorFallback } from "@rm-hull/chakra-error-fallback";
+import { RouterProvider, createRouter } from "@tanstack/react-router";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { ErrorBoundary } from "react-error-boundary";
-import { BrowserRouter as Router } from "react-router-dom";
 import { Provider } from "@/components/ui/provider";
-import { App } from "./App";
 import "./main.css";
+import { routeTree } from "./routeTree.gen";
+
+// Create a new router instance
+const router = createRouter({
+  routeTree,
+  basepath: "/8-bit-trip",
+});
+
+// Register the router instance for type safety
+declare module "@tanstack/react-router" {
+  interface Register {
+    router: typeof router;
+  }
+}
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 root.render(
   <React.StrictMode>
     <Provider>
-      <Router basename="/8-bit-trip">
-        <ErrorBoundary FallbackComponent={ErrorFallback}>
-          <App />
-        </ErrorBoundary>
-      </Router>
+      <ErrorBoundary FallbackComponent={ErrorFallback}>
+        <RouterProvider router={router} />
+      </ErrorBoundary>
     </Provider>
   </React.StrictMode>
 );

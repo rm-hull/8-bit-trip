@@ -1,7 +1,6 @@
 import { Box, Button, ButtonGroup, Clipboard, Flex, IconButton } from "@chakra-ui/react";
 import { useCallback, useState } from "react";
 import { FiCheck, FiClipboard, FiPlay, FiSquare } from "react-icons/fi";
-import { useParams } from "react-router-dom";
 import { AlgoForm, FormData } from "../components/AlgoForm";
 import { AudioAnalyzer } from "../components/AudioAnalyzer";
 
@@ -31,8 +30,11 @@ function replaceCode(pathname: string, formData: FormData): string {
   return pathname;
 }
 
-export function Home() {
-  const { code } = useParams();
+interface HomeProps {
+  code: string;
+}
+
+export function Home({ code }: HomeProps) {
   const { algorithm, sampleRate } = JSON.parse(decodeURIComponent(window.atob(code ?? ""))) as FormData;
   const [formData, setFormData] = useState<FormData>({ algorithm, sampleRate });
   const [context, setContext] = useState<AudioContext>();
