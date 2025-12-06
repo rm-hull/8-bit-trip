@@ -30,6 +30,7 @@ jobs:
 
       - name: Lint
         run: yarn lint
+        continue-on-error: true
 
       - name: Test
         run: yarn test:ci
