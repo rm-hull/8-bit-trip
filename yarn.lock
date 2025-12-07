@@ -13,6 +13,7 @@ __metadata:
     "@chakra-ui/react": "npm:^3.30.0"
     "@emotion/react": "npm:^11.14.0"
     "@emotion/styled": "npm:^11.14.1"
+    "@mlc-ai/web-llm": "npm:^0.2.80"
     "@rm-hull/chakra-error-fallback": "npm:^0.0.12"
     "@tanstack/react-router": "npm:^1.139.14"
     "@tanstack/react-router-devtools": "npm:^1.139.15"
@@ -2589,6 +2590,15 @@ __metadata:
     "@jridgewell/resolve-uri": "npm:^3.1.0"
     "@jridgewell/sourcemap-codec": "npm:^1.4.14"
   checksum: 10/da0283270e691bdb5543806077548532791608e52386cfbbf3b9e8fb00457859d1bd01d512851161c886eb3a2f3ce6fd9bcf25db8edf3bddedd275bd4a88d606
+  languageName: node
+  linkType: hard
+
+"@mlc-ai/web-llm@npm:^0.2.80":
+  version: 0.2.80
+  resolution: "@mlc-ai/web-llm@npm:0.2.80"
+  dependencies:
+    loglevel: "npm:^1.9.1"
+  checksum: 10/f377faf8c4ff91f4bd016e154a863461d434b1a279ab14ae5a0e1c84e84c4f291841dada81e95039b696c522fc01c2be096b4ef074f5c46d33397f1d8ef0c3d2
   languageName: node
   linkType: hard
 
@@ -8262,6 +8272,13 @@ __metadata:
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
   checksum: 10/c08619c038846ea6ac754abd6dd29d2568aa705feb69339e836dfa8d8b09abbb2f859371e86863eda41848221f9af43714491467b5b0299122431e202bb0c532
+  languageName: node
+  linkType: hard
+
+"loglevel@npm:^1.9.1":
+  version: 1.9.2
+  resolution: "loglevel@npm:1.9.2"
+  checksum: 10/6153d8db308323f7ee20130bc40309e7a976c30a10379d8666b596d9c6441965c3e074c8d7ee3347fe5cfc059c0375b6f3e8a10b93d5b813cc5547f5aa412a29
   languageName: node
   linkType: hard
 

@@ -14,6 +14,7 @@ type FormProps = Partial<FormData> & {
 export function AlgoForm({ sampleRate, algorithm, onUpdate }: FormProps) {
   const handleUpdate = useCallback(
     (form: FormData, actions: FormikHelpers<FormData>) => {
+      console.log({form})
       onUpdate(form);
       actions.setSubmitting(false);
     },

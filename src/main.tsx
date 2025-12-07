@@ -4,6 +4,7 @@ import ReactDOM from "react-dom/client";
 import { Provider } from "@/components/ui/provider";
 import "./main.css";
 import { routeTree } from "./routeTree.gen";
+import { downloadModel } from "./llm";
 
 // Create a new router instance
 const router = createRouter({

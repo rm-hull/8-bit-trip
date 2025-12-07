@@ -1,6 +1,7 @@
-import { Box, Button, Clipboard, Flex, IconButton } from "@chakra-ui/react";
+import { Box, Button, Clipboard, Container, Flex, IconButton } from "@chakra-ui/react";
 import { useCallback, useState } from "react";
 import { FiCheck, FiClipboard, FiPlay, FiSquare } from "react-icons/fi";
+import { Clanker } from "@/components/Clanker";
 import { AlgoForm, FormData } from "../components/AlgoForm";
 import { AudioAnalyzer } from "../components/AudioAnalyzer";
 
@@ -79,7 +80,7 @@ export function Home({ code }: HomeProps) {
         void start();
       }
     },
-    [isPlaying, start, stop]
+    [isPlaying, start, stop, setFormData]
   );
 
   return (
@@ -105,6 +106,10 @@ export function Home({ code }: HomeProps) {
           </Clipboard.Root>
         </Box>
       </Flex>
+
+      <Container>
+        <Clanker algorithm={algorithm} />
+      </Container>
 
       {audio && context && <AudioAnalyzer context={context} audioStream={audio} />}
     </Box>

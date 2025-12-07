@@ -9,6 +9,7 @@
     "@chakra-ui/react": "^3.30.0",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
+    "@mlc-ai/web-llm": "^0.2.80",
     "@rm-hull/chakra-error-fallback": "^0.0.12",
     "@tanstack/react-router": "^1.139.14",
     "@tanstack/react-router-devtools": "^1.139.15",
