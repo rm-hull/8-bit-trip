@@ -28,15 +28,18 @@ export async function* downloadModel(modelName: string): AsyncGenerator<string> 
     const progressQueue: string[] = [];
     const { CreateMLCEngine } = await getLibrary();
     const engineOpts: MLCEngineConfig = {
-      initProgressCallback: (progress) => {
+      initProgressCallback: (progress: string) => {
         progressQueue.push(progress.text.replace(clipMessage, ""));
       },
     };
 
     let done = false;
     const downloadPromise = (async () => {
-      model = await CreateMLCEngine(modelName, engineOpts);
-      done = true;
+      try {
+        model = await CreateMLCEngine(modelName, engineOpts);
+      } finally {
+        done = true;
+      }
     })();
 
     // Poll for progress updates until done
@@ -73,10 +76,10 @@ export async function systemPrompt(instructions: string, prompt: string): Promis
   for await (const chunk of response) {
     if (chunk.choices.length > 0) {
       const content = chunk.choices[0].delta.content ?? "";
-      // yield content;
       answer += content;
     }
   }
 
+  console.log(answer);
   return answer;
 }
