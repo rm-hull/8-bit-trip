@@ -53,7 +53,7 @@ __metadata:
     eslint-plugin-unused-imports: "npm:^4.3.0"
     formik: "npm:^2.4.9"
     framer-motion: "npm:^12.23.25"
-    jsdom: "npm:^27.2.0"
+    jsdom: "npm:^27.3.0"
     next-themes: "npm:^0.4.6"
     prettier: "npm:^3.7.4"
     react: "npm:^19.2.1"
@@ -68,10 +68,10 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@acemir/cssom@npm:^0.9.23":
-  version: 0.9.26
-  resolution: "@acemir/cssom@npm:0.9.26"
-  checksum: 10/f12183e84aef1b78ce7ebd4c89a55f78a4f14bc46ed8344995c59587b8aa1cb8c070ebcc6a160db22285a82e1b1755435dce2a91d2bbcefd21ef52f97e3adfee
+"@acemir/cssom@npm:^0.9.28":
+  version: 0.9.28
+  resolution: "@acemir/cssom@npm:0.9.28"
+  checksum: 10/429faa2af7bffdcf3311e984f6b8ced77bf58d936e0e9a22c2fc892a84e54d2c8cbd71ae3a979ef54241509ac7c866cb880d919e3e713e64c865a1cd4ede3a1f
   languageName: node
   linkType: hard
 
@@ -156,7 +156,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@asamuzakjp/css-color@npm:^4.0.3":
+"@asamuzakjp/css-color@npm:^4.1.0":
   version: 4.1.0
   resolution: "@asamuzakjp/css-color@npm:4.1.0"
   dependencies:
@@ -169,7 +169,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@asamuzakjp/dom-selector@npm:^6.7.4":
+"@asamuzakjp/dom-selector@npm:^6.7.6":
   version: 6.7.6
   resolution: "@asamuzakjp/dom-selector@npm:6.7.6"
   dependencies:
@@ -1751,10 +1751,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@csstools/css-syntax-patches-for-csstree@npm:^1.0.14":
-  version: 1.0.20
-  resolution: "@csstools/css-syntax-patches-for-csstree@npm:1.0.20"
-  checksum: 10/e13c96e1d1fdb4fe48ec959ee8dede817151d4d1ae44a9b36d56f6da69a3d4bb019ae684a102a32d8aab7de06634c4f7876f7e570c40e81bb93361cd8bbfb04a
+"@csstools/css-syntax-patches-for-csstree@npm:1.0.14":
+  version: 1.0.14
+  resolution: "@csstools/css-syntax-patches-for-csstree@npm:1.0.14"
+  peerDependencies:
+    postcss: ^8.4
+  checksum: 10/c783d5db307552f483d95266452a7765ca138a9e64f12d013c63e960c9c8abbf82c899a34028af1f5ad714e0e94edd97b1aa31784923c1d7d1756d775c3c1d0a
   languageName: node
   linkType: hard
 
@@ -5727,14 +5729,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cssstyle@npm:^5.3.3":
-  version: 5.3.3
-  resolution: "cssstyle@npm:5.3.3"
+"cssstyle@npm:^5.3.4":
+  version: 5.3.4
+  resolution: "cssstyle@npm:5.3.4"
   dependencies:
-    "@asamuzakjp/css-color": "npm:^4.0.3"
-    "@csstools/css-syntax-patches-for-csstree": "npm:^1.0.14"
+    "@asamuzakjp/css-color": "npm:^4.1.0"
+    "@csstools/css-syntax-patches-for-csstree": "npm:1.0.14"
     css-tree: "npm:^3.1.0"
-  checksum: 10/8c6133761395f03d50e74ff4c05473b4835b79013efed3f4b79dc452d94a7122082887d89c3c1164bba0e8919be209b75e4f4706197c086fc9f4b50182ab03d6
+  checksum: 10/4eeb85cbaba47c2e4eb9f9a9dea9633e311f1cb706258f582fc8d099edc0b8c0deea93a6943981960d7f920ac0f3bbb5277cc4c355915406c17a95d0049a073d
   languageName: node
   linkType: hard
 
@@ -8084,13 +8086,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jsdom@npm:^27.2.0":
-  version: 27.2.0
-  resolution: "jsdom@npm:27.2.0"
+"jsdom@npm:^27.3.0":
+  version: 27.3.0
+  resolution: "jsdom@npm:27.3.0"
   dependencies:
-    "@acemir/cssom": "npm:^0.9.23"
-    "@asamuzakjp/dom-selector": "npm:^6.7.4"
-    cssstyle: "npm:^5.3.3"
+    "@acemir/cssom": "npm:^0.9.28"
+    "@asamuzakjp/dom-selector": "npm:^6.7.6"
+    cssstyle: "npm:^5.3.4"
     data-urls: "npm:^6.0.0"
     decimal.js: "npm:^10.6.0"
     html-encoding-sniffer: "npm:^4.0.0"
@@ -8113,7 +8115,7 @@ __metadata:
   peerDependenciesMeta:
     canvas:
       optional: true
-  checksum: 10/78458e0230fd18ceef1e8753ab44eadf436654540a3d1dc5068f49b87c2bd1752b8fff25c9e1f30ee406ae3e80cc3f81668f778b8220a7bf9386a0a826dee088
+  checksum: 10/c650e954df04a80e7309984450ce764ae2a840810b9575b20204194dee3c5cff42e65526519cb58b946ffe66a058b7b763bad4814b3903a9c86a2c1651b8b74b
   languageName: node
   linkType: hard
 
