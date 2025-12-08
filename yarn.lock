@@ -15,7 +15,7 @@ __metadata:
     "@emotion/styled": "npm:^11.14.1"
     "@rm-hull/chakra-error-fallback": "npm:^0.0.12"
     "@tanstack/react-router": "npm:^1.139.14"
-    "@tanstack/react-router-devtools": "npm:^1.139.15"
+    "@tanstack/react-router-devtools": "npm:^1.140.0"
     "@tanstack/router-plugin": "npm:^1.139.14"
     "@testing-library/dom": "npm:^10.4.1"
     "@testing-library/jest-dom": "npm:^6.9.1"
@@ -2978,20 +2978,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/react-router-devtools@npm:^1.139.15":
-  version: 1.139.15
-  resolution: "@tanstack/react-router-devtools@npm:1.139.15"
+"@tanstack/react-router-devtools@npm:^1.140.0":
+  version: 1.140.0
+  resolution: "@tanstack/react-router-devtools@npm:1.140.0"
   dependencies:
-    "@tanstack/router-devtools-core": "npm:1.139.15"
+    "@tanstack/router-devtools-core": "npm:1.140.0"
   peerDependencies:
-    "@tanstack/react-router": ^1.139.14
-    "@tanstack/router-core": ^1.139.14
+    "@tanstack/react-router": ^1.140.0
+    "@tanstack/router-core": ^1.140.0
     react: ">=18.0.0 || >=19.0.0"
     react-dom: ">=18.0.0 || >=19.0.0"
   peerDependenciesMeta:
     "@tanstack/router-core":
       optional: true
-  checksum: 10/85d9b65d2ccfb027f66b1c0ce862c218ff3a1b12d182156bc212c3ef318e20d8723fc009f73f4efcb917a3c98cb80aa54e6eda1798b0fb7284fdbe2a3e5e3203
+  checksum: 10/ed460680997d0ee0d32f795df4ba27812838d205cff39c28f83cbbf11a8a40704962ec6125b222d9e45a8cf0392d5cb493964f68349e137c849e5b752673f282
   languageName: node
   linkType: hard
 
@@ -3040,21 +3040,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/router-devtools-core@npm:1.139.15":
-  version: 1.139.15
-  resolution: "@tanstack/router-devtools-core@npm:1.139.15"
+"@tanstack/router-devtools-core@npm:1.140.0":
+  version: 1.140.0
+  resolution: "@tanstack/router-devtools-core@npm:1.140.0"
   dependencies:
     clsx: "npm:^2.1.1"
     goober: "npm:^2.1.16"
     tiny-invariant: "npm:^1.3.3"
   peerDependencies:
-    "@tanstack/router-core": ^1.139.14
+    "@tanstack/router-core": ^1.140.0
     csstype: ^3.0.10
     solid-js: ">=1.9.5"
   peerDependenciesMeta:
     csstype:
       optional: true
-  checksum: 10/4e0188cde32e030ea586c1d2a1632804fd38557f5be9de600591296050f89059e3788079c079d712c2a39973642e839c41e175b919fa23d24556aac6b72ddfa2
+  checksum: 10/0dd1082c8cee07be41537dc07feb96e7680c40913119bc39c8223918785d43926b0c837fc4916737207f3eb31d61c7f10eafcfb4da32df092ac356be49b4bceb
   languageName: node
   linkType: hard
 
