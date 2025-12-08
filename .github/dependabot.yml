@@ -11,6 +11,9 @@ updates:
       interval: daily
     versioning-strategy: increase
     groups:
+      tanstack:
+        patterns:
+          - "@tanstack/*"
       eslint:
         patterns:
           - "*eslint*"
