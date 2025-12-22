@@ -49,7 +49,7 @@ __metadata:
     eslint-plugin-react-hooks: "npm:^7.0.1"
     eslint-plugin-react-perf: "npm:^3.3.3"
     eslint-plugin-react-refresh: "npm:^0.4.26"
-    eslint-plugin-testing-library: "npm:^7.15.1"
+    eslint-plugin-testing-library: "npm:^7.15.2"
     eslint-plugin-unused-imports: "npm:^4.3.0"
     formik: "npm:^2.4.9"
     framer-motion: "npm:^12.23.26"
@@ -6859,15 +6859,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-testing-library@npm:^7.15.1":
-  version: 7.15.1
-  resolution: "eslint-plugin-testing-library@npm:7.15.1"
+"eslint-plugin-testing-library@npm:^7.15.2":
+  version: 7.15.2
+  resolution: "eslint-plugin-testing-library@npm:7.15.2"
   dependencies:
     "@typescript-eslint/scope-manager": "npm:^8.15.0"
     "@typescript-eslint/utils": "npm:^8.15.0"
   peerDependencies:
     eslint: ^8.57.0 || ^9.0.0
-  checksum: 10/6e83c8265b3aa8b68127e88de31c9ae00862ffd5f4b632ad30d40933368cd6d86c1eff88216360a873c57fdc01745442a4f419ca8baa93e1c3085a4c98c3a616
+  checksum: 10/883ebb2f5c5bbb5023234dd2c6cea5db201a201f5df1dad594256f2580b15d515d47977c5377e5aa54e1560425cfe4a8161d8244d9c86ac3762e3b5e60f8df80
   languageName: node
   linkType: hard
 
