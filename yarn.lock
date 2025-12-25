@@ -14,9 +14,9 @@ __metadata:
     "@emotion/react": "npm:^11.14.0"
     "@emotion/styled": "npm:^11.14.1"
     "@rm-hull/chakra-error-fallback": "npm:^0.0.12"
-    "@tanstack/react-router": "npm:^1.143.4"
-    "@tanstack/react-router-devtools": "npm:^1.143.4"
-    "@tanstack/router-plugin": "npm:^1.143.4"
+    "@tanstack/react-router": "npm:^1.143.6"
+    "@tanstack/react-router-devtools": "npm:^1.143.6"
+    "@tanstack/router-plugin": "npm:^1.143.6"
     "@testing-library/dom": "npm:^10.4.1"
     "@testing-library/jest-dom": "npm:^6.9.1"
     "@testing-library/react": "npm:^16.3.1"
@@ -2980,37 +2980,37 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/react-router-devtools@npm:^1.143.4":
-  version: 1.143.4
-  resolution: "@tanstack/react-router-devtools@npm:1.143.4"
+"@tanstack/react-router-devtools@npm:^1.143.6":
+  version: 1.143.6
+  resolution: "@tanstack/react-router-devtools@npm:1.143.6"
   dependencies:
-    "@tanstack/router-devtools-core": "npm:1.143.4"
+    "@tanstack/router-devtools-core": "npm:1.143.6"
   peerDependencies:
-    "@tanstack/react-router": ^1.143.4
-    "@tanstack/router-core": ^1.143.4
+    "@tanstack/react-router": ^1.143.6
+    "@tanstack/router-core": ^1.143.6
     react: ">=18.0.0 || >=19.0.0"
     react-dom: ">=18.0.0 || >=19.0.0"
   peerDependenciesMeta:
     "@tanstack/router-core":
       optional: true
-  checksum: 10/9087ffc668d2e566e822fee24a3b02ea5248e53d1749e60b560df40dc3a46d1091b8c7fee5e057427da709f54a7e65536831716f46742b40d9feec0c25f0180f
+  checksum: 10/29c89405d78776475115ea4c5472444e30af12d483c45814639c26b28dfcef184170480ea92b6f11f3c526ec99ca6a3841ea886b6419dd8ba1461b7c39763c48
   languageName: node
   linkType: hard
 
-"@tanstack/react-router@npm:^1.143.4":
-  version: 1.143.4
-  resolution: "@tanstack/react-router@npm:1.143.4"
+"@tanstack/react-router@npm:^1.143.6":
+  version: 1.143.6
+  resolution: "@tanstack/react-router@npm:1.143.6"
   dependencies:
     "@tanstack/history": "npm:1.141.0"
     "@tanstack/react-store": "npm:^0.8.0"
-    "@tanstack/router-core": "npm:1.143.4"
+    "@tanstack/router-core": "npm:1.143.6"
     isbot: "npm:^5.1.22"
     tiny-invariant: "npm:^1.3.3"
     tiny-warning: "npm:^1.0.3"
   peerDependencies:
     react: ">=18.0.0 || >=19.0.0"
     react-dom: ">=18.0.0 || >=19.0.0"
-  checksum: 10/255ba43b89f4c18c52c4731522dbbc83e0556bafc0315b839c9b9ee8b639e8148935c5b78e815a384b13183ebd1416cfe1f9e767b23b1debe540190f858c198f
+  checksum: 10/3caa075382e81d3fabe0aaa6f1430dfb61485ed07b8ca6f0a6d7453960f6fb8ba674d9dda407bf46165dac7eb47b7d8b50590581a4aa0c0eb778bf1d2af741f5
   languageName: node
   linkType: hard
 
@@ -3027,9 +3027,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/router-core@npm:1.143.4":
-  version: 1.143.4
-  resolution: "@tanstack/router-core@npm:1.143.4"
+"@tanstack/router-core@npm:1.143.6":
+  version: 1.143.6
+  resolution: "@tanstack/router-core@npm:1.143.6"
   dependencies:
     "@tanstack/history": "npm:1.141.0"
     "@tanstack/store": "npm:^0.8.0"
@@ -3038,33 +3038,33 @@ __metadata:
     seroval-plugins: "npm:^1.4.0"
     tiny-invariant: "npm:^1.3.3"
     tiny-warning: "npm:^1.0.3"
-  checksum: 10/57e6d4035088f16ee35e677dfb18720250bb853ea171eec328529414f2071c20b64a5895869175c9195db69e286dfa2a3e31666802f75deda1eea3cb37b02336
+  checksum: 10/289ceebf834060938ee11001e5883935ddbebf8cc55ddab8bed0dc7501e4e8b09259da264503eab06cc81e0553d6b2840236ed75cee7cf4be07e903c720048d6
   languageName: node
   linkType: hard
 
-"@tanstack/router-devtools-core@npm:1.143.4":
-  version: 1.143.4
-  resolution: "@tanstack/router-devtools-core@npm:1.143.4"
+"@tanstack/router-devtools-core@npm:1.143.6":
+  version: 1.143.6
+  resolution: "@tanstack/router-devtools-core@npm:1.143.6"
   dependencies:
     clsx: "npm:^2.1.1"
     goober: "npm:^2.1.16"
     tiny-invariant: "npm:^1.3.3"
   peerDependencies:
-    "@tanstack/router-core": ^1.143.4
+    "@tanstack/router-core": ^1.143.6
     csstype: ^3.0.10
     solid-js: ">=1.9.5"
   peerDependenciesMeta:
     csstype:
       optional: true
-  checksum: 10/0600599f260cc67a28cafab99e2ad56465fd2fadbcbca5fb25328035ecab7ce26f6a942c608c77092b9df320c63e8d07ccf5d75524b0e25601a18b38b51bacba
+  checksum: 10/5e20b10c04186f3e0052bc999f0deb2ef49d292b74a5cf490e9e3c215a310d0eac787f086673bbafb01fe74b8a5ada47f6d167fc51a7310a48dbdf3474a47506
   languageName: node
   linkType: hard
 
-"@tanstack/router-generator@npm:1.143.4":
-  version: 1.143.4
-  resolution: "@tanstack/router-generator@npm:1.143.4"
+"@tanstack/router-generator@npm:1.143.6":
+  version: 1.143.6
+  resolution: "@tanstack/router-generator@npm:1.143.6"
   dependencies:
-    "@tanstack/router-core": "npm:1.143.4"
+    "@tanstack/router-core": "npm:1.143.6"
     "@tanstack/router-utils": "npm:1.141.0"
     "@tanstack/virtual-file-routes": "npm:1.141.0"
     prettier: "npm:^3.5.0"
@@ -3072,13 +3072,13 @@ __metadata:
     source-map: "npm:^0.7.4"
     tsx: "npm:^4.19.2"
     zod: "npm:^3.24.2"
-  checksum: 10/742bf288669389b17fbb32b57c9760d3c59254bd7fca0baa5291b361d8950f24d995ce7aa303f3606e978eecae2614c02e24c66e6d88256cf64119d9b9193393
+  checksum: 10/612b9d5cd892ba759b1f93d021559a334660f1d4795969de7ce607fd1ebf7b4e8f7d0bbc1d7a5fa6806e44f40f4b4f8cf39d342613c7af739d98d239db1411f9
   languageName: node
   linkType: hard
 
-"@tanstack/router-plugin@npm:^1.143.4":
-  version: 1.143.4
-  resolution: "@tanstack/router-plugin@npm:1.143.4"
+"@tanstack/router-plugin@npm:^1.143.6":
+  version: 1.143.6
+  resolution: "@tanstack/router-plugin@npm:1.143.6"
   dependencies:
     "@babel/core": "npm:^7.27.7"
     "@babel/plugin-syntax-jsx": "npm:^7.27.1"
@@ -3086,8 +3086,8 @@ __metadata:
     "@babel/template": "npm:^7.27.2"
     "@babel/traverse": "npm:^7.27.7"
     "@babel/types": "npm:^7.27.7"
-    "@tanstack/router-core": "npm:1.143.4"
-    "@tanstack/router-generator": "npm:1.143.4"
+    "@tanstack/router-core": "npm:1.143.6"
+    "@tanstack/router-generator": "npm:1.143.6"
     "@tanstack/router-utils": "npm:1.141.0"
     "@tanstack/virtual-file-routes": "npm:1.141.0"
     babel-dead-code-elimination: "npm:^1.0.10"
@@ -3096,7 +3096,7 @@ __metadata:
     zod: "npm:^3.24.2"
   peerDependencies:
     "@rsbuild/core": ">=1.0.2"
-    "@tanstack/react-router": ^1.143.4
+    "@tanstack/react-router": ^1.143.6
     vite: ">=5.0.0 || >=6.0.0 || >=7.0.0"
     vite-plugin-solid: ^2.11.10
     webpack: ">=5.92.0"
@@ -3111,7 +3111,7 @@ __metadata:
       optional: true
     webpack:
       optional: true
-  checksum: 10/2bcde5daea38522fbcff0a9e0727f1c2436cbdcf75ddcd536921f0802ada6aad4c1f26b03de29b856e734cf5c92e5e76ef478596c1ae5eb06aaa63ed831d56e2
+  checksum: 10/8203e857e02b92e8a23fa8e962ba993ca0966f15a1faffa0ba8341ca4fed9c8d0df568808a9ea1a9425c8688ac93650329c205270caf71bf77f61567a9d19cad
   languageName: node
   linkType: hard
 
