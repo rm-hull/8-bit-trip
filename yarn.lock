@@ -16,7 +16,7 @@ __metadata:
     "@rm-hull/chakra-error-fallback": "npm:^0.0.12"
     "@tanstack/react-router": "npm:^1.145.7"
     "@tanstack/react-router-devtools": "npm:^1.145.7"
-    "@tanstack/router-plugin": "npm:^1.145.7"
+    "@tanstack/router-plugin": "npm:^1.145.10"
     "@testing-library/dom": "npm:^10.4.1"
     "@testing-library/jest-dom": "npm:^6.9.1"
     "@testing-library/react": "npm:^16.3.1"
@@ -3099,9 +3099,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/router-plugin@npm:^1.145.7":
-  version: 1.145.7
-  resolution: "@tanstack/router-plugin@npm:1.145.7"
+"@tanstack/router-plugin@npm:^1.145.10":
+  version: 1.145.10
+  resolution: "@tanstack/router-plugin@npm:1.145.10"
   dependencies:
     "@babel/core": "npm:^7.28.5"
     "@babel/plugin-syntax-jsx": "npm:^7.27.1"
@@ -3134,7 +3134,7 @@ __metadata:
       optional: true
     webpack:
       optional: true
-  checksum: 10/646ba5a2f82bab691785c13f789e2a196d29f9a513dbd1f4f74a4469b67d75e79b846433ea34488a8655dee9dec6a9e38e820421167a64d36ab35cb08e17f0a1
+  checksum: 10/0fd7e59a7cd022bd06bd4ece8fe2f6ba3a4c93c404bf7ac73d01c3bf783741607ae1e4f4af1038a9e46e128438e769ae29b495e04eee42f91824ca6217b35858
   languageName: node
   linkType: hard
 
