@@ -9,7 +9,7 @@
     "@chakra-ui/react": "^3.31.0",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
-    "@rm-hull/chakra-error-fallback": "^0.0.12",
+    "@rm-hull/chakra-error-fallback": "^0.1.0",
     "@tanstack/react-router": "^1.157.16",
     "@tanstack/react-router-devtools": "^1.157.16",
     "clsx": "^2.1.1",
