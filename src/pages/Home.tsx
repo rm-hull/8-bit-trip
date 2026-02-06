@@ -73,6 +73,7 @@ export function Home({ code }: HomeProps) {
 
   const handleUpdate = useCallback(
     (data: FormData) => {
+      console.log("Home form data:", data);
       setFormData(data);
       if (isPlaying) {
         stop();
