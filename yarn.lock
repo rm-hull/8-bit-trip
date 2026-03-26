@@ -14,9 +14,9 @@ __metadata:
     "@emotion/react": "npm:^11.14.0"
     "@emotion/styled": "npm:^11.14.1"
     "@rm-hull/chakra-error-fallback": "npm:^0.1.0"
-    "@tanstack/react-router": "npm:^1.168.3"
+    "@tanstack/react-router": "npm:^1.168.4"
     "@tanstack/react-router-devtools": "npm:^1.166.11"
-    "@tanstack/router-plugin": "npm:^1.167.4"
+    "@tanstack/router-plugin": "npm:^1.167.5"
     "@testing-library/dom": "npm:^10.4.1"
     "@testing-library/jest-dom": "npm:^6.9.1"
     "@testing-library/react": "npm:^16.3.2"
@@ -3149,37 +3149,37 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/react-router@npm:^1.168.3":
-  version: 1.168.3
-  resolution: "@tanstack/react-router@npm:1.168.3"
+"@tanstack/react-router@npm:^1.168.4":
+  version: 1.168.4
+  resolution: "@tanstack/react-router@npm:1.168.4"
   dependencies:
     "@tanstack/history": "npm:1.161.6"
-    "@tanstack/react-store": "npm:^0.9.2"
-    "@tanstack/router-core": "npm:1.168.3"
+    "@tanstack/react-store": "npm:^0.9.3"
+    "@tanstack/router-core": "npm:1.168.4"
     isbot: "npm:^5.1.22"
   peerDependencies:
     react: ">=18.0.0 || >=19.0.0"
     react-dom: ">=18.0.0 || >=19.0.0"
-  checksum: 10/6dc22f58831f903d4ab6a558f2cc153e121da20c678cbf0dd3280f6a6d133d22c32e935d0ca840dbb8f54afb9630f4efaef05c57b28185c75b5cf51e04253d0b
+  checksum: 10/0da3b4a9ea76cb77bd4065c5bc25330346f475421cbe48a9e3bd9ecdd796b12d15ca94f367626fdb8a7d8cfde7def4f273e34d10b23c8adc1c143e924a988742
   languageName: node
   linkType: hard
 
-"@tanstack/react-store@npm:^0.9.2":
-  version: 0.9.2
-  resolution: "@tanstack/react-store@npm:0.9.2"
+"@tanstack/react-store@npm:^0.9.3":
+  version: 0.9.3
+  resolution: "@tanstack/react-store@npm:0.9.3"
   dependencies:
-    "@tanstack/store": "npm:0.9.2"
+    "@tanstack/store": "npm:0.9.3"
     use-sync-external-store: "npm:^1.6.0"
   peerDependencies:
     react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
     react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
-  checksum: 10/5589c9c82644408f04b188768ebd04cd8f1a7fa5f8a22cd9879aadb4b60e35ecf6560917cca24630a389f573d4b59b634dbd5a095a01d791d86f2f3300c038be
+  checksum: 10/289227df0796cda41ff4cabab70670ac403e0b68847c6161faddf963b24e3e944ca801230cec7fd52d1dd1de611e220dbdfff19220d8024b919c79308c871d9c
   languageName: node
   linkType: hard
 
-"@tanstack/router-core@npm:1.168.3":
-  version: 1.168.3
-  resolution: "@tanstack/router-core@npm:1.168.3"
+"@tanstack/router-core@npm:1.168.4":
+  version: 1.168.4
+  resolution: "@tanstack/router-core@npm:1.168.4"
   dependencies:
     "@tanstack/history": "npm:1.161.6"
     cookie-es: "npm:^2.0.0"
@@ -3187,7 +3187,7 @@ __metadata:
     seroval-plugins: "npm:^1.4.2"
   bin:
     intent: bin/intent.js
-  checksum: 10/03c80a9d54ff93a898c03092704fc721d8cc3f27341b0df9d41a6bbf0f38a4500b9364bcb4d40a9609872f105db8a89976c8e993603a27ca04671b5499b07d9d
+  checksum: 10/f9b13defded84be360517d9d8f0c8736ebc27c93ba235f1cbb82d469507405c5b2cc62438217d95298df12cac13968baf9805bd35d6a7b7f0e8ad98701256da7
   languageName: node
   linkType: hard
 
@@ -3207,11 +3207,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/router-generator@npm:1.166.17":
-  version: 1.166.17
-  resolution: "@tanstack/router-generator@npm:1.166.17"
+"@tanstack/router-generator@npm:1.166.18":
+  version: 1.166.18
+  resolution: "@tanstack/router-generator@npm:1.166.18"
   dependencies:
-    "@tanstack/router-core": "npm:1.168.3"
+    "@tanstack/router-core": "npm:1.168.4"
     "@tanstack/router-utils": "npm:1.161.6"
     "@tanstack/virtual-file-routes": "npm:1.161.7"
     prettier: "npm:^3.5.0"
@@ -3219,13 +3219,13 @@ __metadata:
     source-map: "npm:^0.7.4"
     tsx: "npm:^4.19.2"
     zod: "npm:^3.24.2"
-  checksum: 10/6c856b396e098b092ea7d8542936796f82256178e0e98f759be65f1509e630f8ca7c2f2eb5c3173f48cfad651d81cf957c4f3121a425f6ef293da43be3be8ee2
+  checksum: 10/fa5a6620e2baf7d3f6e7a5ab552579ef4e72d92c18027eb3e137394159abf643337a74e2b2d9df83c928bdc098f9f0efba547072f92f43c31717c1997e6ac45f
   languageName: node
   linkType: hard
 
-"@tanstack/router-plugin@npm:^1.167.4":
-  version: 1.167.4
-  resolution: "@tanstack/router-plugin@npm:1.167.4"
+"@tanstack/router-plugin@npm:^1.167.5":
+  version: 1.167.5
+  resolution: "@tanstack/router-plugin@npm:1.167.5"
   dependencies:
     "@babel/core": "npm:^7.28.5"
     "@babel/plugin-syntax-jsx": "npm:^7.27.1"
@@ -3233,8 +3233,8 @@ __metadata:
     "@babel/template": "npm:^7.27.2"
     "@babel/traverse": "npm:^7.28.5"
     "@babel/types": "npm:^7.28.5"
-    "@tanstack/router-core": "npm:1.168.3"
-    "@tanstack/router-generator": "npm:1.166.17"
+    "@tanstack/router-core": "npm:1.168.4"
+    "@tanstack/router-generator": "npm:1.166.18"
     "@tanstack/router-utils": "npm:1.161.6"
     "@tanstack/virtual-file-routes": "npm:1.161.7"
     chokidar: "npm:^3.6.0"
@@ -3242,7 +3242,7 @@ __metadata:
     zod: "npm:^3.24.2"
   peerDependencies:
     "@rsbuild/core": ">=1.0.2"
-    "@tanstack/react-router": ^1.168.3
+    "@tanstack/react-router": ^1.168.4
     vite: ">=5.0.0 || >=6.0.0 || >=7.0.0"
     vite-plugin-solid: ^2.11.10
     webpack: ">=5.92.0"
@@ -3259,7 +3259,7 @@ __metadata:
       optional: true
   bin:
     intent: bin/intent.js
-  checksum: 10/e3cd4a7452117970e2c2e650ab9175bb5df430f2b5a142b24e4882ff64bd0e9d1e53f1fd3712a2a3f9b3074c2268343e10e32332a3da2ca8f8e1bb3abda5ce37
+  checksum: 10/8a4b66aac855a7b1dc93f110b14d478847cf9c815cb387797f13fa4db6ffac2394a61a81866f1823561e40f3fbea9bc32052cefaf4484a0c4b001617077d7b9f
   languageName: node
   linkType: hard
 
@@ -3280,10 +3280,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/store@npm:0.9.2":
-  version: 0.9.2
-  resolution: "@tanstack/store@npm:0.9.2"
-  checksum: 10/5bc98eb092253c41d9ee2b3976a239155a42b25d886203e1ad9e385d4b2d90c8dde46736da3102874dba3e0f6437825751607112dcdd30c02646ef89dd00d0ab
+"@tanstack/store@npm:0.9.3":
+  version: 0.9.3
+  resolution: "@tanstack/store@npm:0.9.3"
+  checksum: 10/fb41b7cb0ea9d79ba6db0335d4bf503911df8e203d5c4fae34996a627e1b43c93071b2d733f13f6db51aff4c703022cd7c2477a9192f84141e0010c4df782f63
   languageName: node
   linkType: hard
 
