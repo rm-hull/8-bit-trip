@@ -21,7 +21,7 @@ type FormProps = Partial<FormData> & {
   onUpdate: (form: FormData) => void;
 };
 
-const choices = [
+const choices: [number, string][] = [
   // attribution: see youtube vids from viznut
   [8000, "(t>>6|t|t>>(t>>16))*10+((t>>11)&7)"],
   [8000, "(t%(t/(t>>9|t>>13)))"],
@@ -103,7 +103,7 @@ export function AlgoForm({ sampleRate = 8000, algorithm = "", onUpdate }: FormPr
       label: algorithm,
       value: { sampleRate, algorithm },
     })),
-    // filter: contains,
+    filter: contains,
   });
 
   return (
@@ -148,7 +148,7 @@ export function AlgoForm({ sampleRate = 8000, algorithm = "", onUpdate }: FormPr
             width="full"
             collection={algorithmCollection}
             onValueChange={handleAlgorithmChange}
-            // onInputValueChange={(e) => filter(e.inputValue)}
+            onInputValueChange={(e) => filter(e.inputValue)}
           >
             <Combobox.Control>
               <Combobox.Input placeholder="Type to search" />

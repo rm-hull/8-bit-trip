@@ -1,9 +1,9 @@
 /// <reference types="vitest" />
 import { execSync } from "child_process";
 import { tanstackRouter } from "@tanstack/router-plugin/vite";
-import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
-import tsconfigPaths from "vite-tsconfig-paths";
+import react from "@vitejs/plugin-react";
+import babel from "@rolldown/plugin-babel";
 
 // https://vitejs.dev/config/
 export default defineConfig(() => {
@@ -13,8 +13,8 @@ export default defineConfig(() => {
   return {
     plugins: [
       tanstackRouter({ target: "react", autoCodeSplitting: true }),
-      react({ babel: { plugins: ["babel-plugin-react-compiler"] } }),
-      tsconfigPaths(),
+      react(),
+      babel({}),
     ],
     base: "/8-bit-trip",
     build: {
@@ -29,6 +29,12 @@ export default defineConfig(() => {
         reporter: ["text", "json", "html", "lcov"],
         include: ["src/**/*.{ts,tsx}"],
         exclude: ["src/**/*.spec.{ts,tsx}", "src/test/**", "**/*.d.ts"],
+      },
+    },
+    resolve: {
+      tsconfigPaths: true,
+      alias: {
+        "@": "/src",
       },
     },
   };
