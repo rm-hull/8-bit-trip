@@ -18,7 +18,7 @@ __metadata:
     "@rolldown/plugin-babel": "npm:^0.2.3"
     "@tanstack/react-router": "npm:^1.169.1"
     "@tanstack/react-router-devtools": "npm:^1.166.13"
-    "@tanstack/router-plugin": "npm:^1.167.31"
+    "@tanstack/router-plugin": "npm:^1.167.32"
     "@testing-library/dom": "npm:^10.4.1"
     "@testing-library/jest-dom": "npm:^6.9.1"
     "@testing-library/react": "npm:^16.3.2"
@@ -3272,9 +3272,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/router-plugin@npm:^1.167.31":
-  version: 1.167.31
-  resolution: "@tanstack/router-plugin@npm:1.167.31"
+"@tanstack/router-plugin@npm:^1.167.32":
+  version: 1.167.32
+  resolution: "@tanstack/router-plugin@npm:1.167.32"
   dependencies:
     "@babel/core": "npm:^7.28.5"
     "@babel/plugin-syntax-jsx": "npm:^7.27.1"
@@ -3308,7 +3308,7 @@ __metadata:
       optional: true
   bin:
     intent: bin/intent.js
-  checksum: 10/7d04ab294b6ba038ad4e1030f67d4db04a0cdd57415d0dfa113cbf77a312399e3a2bd6aabf098dbf58c5e34f5be82f41dd93668366e9dfadbe54d81ed3bfe05e
+  checksum: 10/643b4dc8e6d2956a44570a2360fb52db6a94698e6ffea70268f580d98050e28715a64127e55f3c2008a8473d6ee2e4faaa4477545aebb2c1e590f88314bb5ef9
   languageName: node
   linkType: hard
 
