@@ -18,7 +18,7 @@ __metadata:
     "@rolldown/plugin-babel": "npm:^0.2.3"
     "@tanstack/react-router": "npm:^1.169.2"
     "@tanstack/react-router-devtools": "npm:^1.166.13"
-    "@tanstack/router-plugin": "npm:^1.167.34"
+    "@tanstack/router-plugin": "npm:^1.167.35"
     "@testing-library/dom": "npm:^10.4.1"
     "@testing-library/jest-dom": "npm:^6.9.1"
     "@testing-library/react": "npm:^16.3.2"
@@ -3254,25 +3254,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/router-generator@npm:1.166.41":
-  version: 1.166.41
-  resolution: "@tanstack/router-generator@npm:1.166.41"
+"@tanstack/router-generator@npm:1.166.42":
+  version: 1.166.42
+  resolution: "@tanstack/router-generator@npm:1.166.42"
   dependencies:
     "@babel/types": "npm:^7.28.5"
     "@tanstack/router-core": "npm:1.169.2"
     "@tanstack/router-utils": "npm:1.161.8"
     "@tanstack/virtual-file-routes": "npm:1.161.7"
-    jiti: "npm:^2.6.1"
+    jiti: "npm:^2.7.0"
     magic-string: "npm:^0.30.21"
     prettier: "npm:^3.5.0"
     zod: "npm:^3.24.2"
-  checksum: 10/545a81f685cee3f731997569bc8c4e2bd8388f2f7ab98768dc4c568523f45c697757f5be01616089953a6ec150d66a03bc777f0e40f76be4ee722aab438a198f
+  checksum: 10/6cc02d688b9ee4d8c7ab97bebd8605de6cea9f95252075861593808ad76012b0486abccb6b9d7151b9510007127ad8b371ad3ecbc29444b6836069f3e03f632b
   languageName: node
   linkType: hard
 
-"@tanstack/router-plugin@npm:^1.167.34":
-  version: 1.167.34
-  resolution: "@tanstack/router-plugin@npm:1.167.34"
+"@tanstack/router-plugin@npm:^1.167.35":
+  version: 1.167.35
+  resolution: "@tanstack/router-plugin@npm:1.167.35"
   dependencies:
     "@babel/core": "npm:^7.28.5"
     "@babel/plugin-syntax-jsx": "npm:^7.27.1"
@@ -3281,7 +3281,7 @@ __metadata:
     "@babel/traverse": "npm:^7.28.5"
     "@babel/types": "npm:^7.28.5"
     "@tanstack/router-core": "npm:1.169.2"
-    "@tanstack/router-generator": "npm:1.166.41"
+    "@tanstack/router-generator": "npm:1.166.42"
     "@tanstack/router-utils": "npm:1.161.8"
     "@tanstack/virtual-file-routes": "npm:1.161.7"
     chokidar: "npm:^3.6.0"
@@ -3304,7 +3304,7 @@ __metadata:
       optional: true
     webpack:
       optional: true
-  checksum: 10/38b612cebe4859ac4ff32c184b4c44d1baf588d363690a2cc9af66376e6e44d168beddeddd3d98814cb5728a0a0cdb42b8ed6a9db01d525a8519ce553eaf17f8
+  checksum: 10/a688bc125aa0e9588e570b7fbbfd6be1903f6fb3cda294fd4f676cee63df5a67a4179b991169bd9fc3ed4e905f73cdd4adc7a95c8039f8a7f6d0a7cb31065429
   languageName: node
   linkType: hard
 
@@ -8336,12 +8336,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jiti@npm:^2.6.1":
-  version: 2.6.1
-  resolution: "jiti@npm:2.6.1"
+"jiti@npm:^2.7.0":
+  version: 2.7.0
+  resolution: "jiti@npm:2.7.0"
   bin:
     jiti: lib/jiti-cli.mjs
-  checksum: 10/8cd72c5fd03a0502564c3f46c49761090f6dadead21fa191b73535724f095ad86c2fa89ee6fe4bc3515337e8d406cc8fb2d37b73fa0c99a34584bac35cd4a4de
+  checksum: 10/6d75a8dbd61dbee031aa0937fabb748ff8ddf370b971958cc704f5cf26b4c5bdc9dcd0563059b2627a2bd41d946fa0bc64f912fdc8981ca7945a9d63c74ad0f9
   languageName: node
   linkType: hard
 
