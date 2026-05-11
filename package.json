@@ -33,7 +33,7 @@
     "@types/babel__core": "^7.20.5",
     "@types/jest": "^30.0.0",
     "@types/jsdom": "^28.0.1",
-    "@types/node": "^25.6.2",
+    "@types/node": "^25.7.0",
     "@types/object-hash": "^3.0.6",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
