@@ -16,7 +16,7 @@ __metadata:
     "@emotion/styled": "npm:^11.14.1"
     "@rm-hull/chakra-error-fallback": "npm:^0.1.4"
     "@rolldown/plugin-babel": "npm:^0.2.3"
-    "@tanstack/react-router": "npm:^1.170.22"
+    "@tanstack/react-router": "npm:^1.170.23"
     "@tanstack/react-router-devtools": "npm:^1.167.1"
     "@tanstack/router-plugin": "npm:^1.168.27"
     "@testing-library/dom": "npm:^10.4.1"
@@ -3370,9 +3370,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/react-router@npm:^1.170.22":
-  version: 1.170.22
-  resolution: "@tanstack/react-router@npm:1.170.22"
+"@tanstack/react-router@npm:^1.170.23":
+  version: 1.170.23
+  resolution: "@tanstack/react-router@npm:1.170.23"
   dependencies:
     "@tanstack/history": "npm:1.162.1"
     "@tanstack/react-store": "npm:^0.9.3"
@@ -3381,7 +3381,7 @@ __metadata:
   peerDependencies:
     react: ">=18.0.0 || >=19.0.0"
     react-dom: ">=18.0.0 || >=19.0.0"
-  checksum: 10/984bdda17e9fb66fde493ad9aeb8fb9fb1ead47ec22582999b8c7633057b2de2807cf189d31568c2fbf2c9f6e7d0b9a6781c06c7ea617880f152c770b03a5d46
+  checksum: 10/d2565c54e92ed39bc3233e389bd124f0ff82a03371db74af02577e65050fc3b043910815680427e43d8dd29d03fcddb94512a2aec3e1c43f37cb56b85cf1b620
   languageName: node
   linkType: hard
 
