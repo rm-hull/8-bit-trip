@@ -22,7 +22,7 @@
     "web-vitals": "^6.2.1"
   },
   "devDependencies": {
-    "@babel/core": "^8.0.1",
+    "@babel/core": "^8.0.5",
     "@chakra-ui/cli": "^3.37.0",
     "@rolldown/plugin-babel": "^0.2.4",
     "@tanstack/router-plugin": "^1.168.36",
