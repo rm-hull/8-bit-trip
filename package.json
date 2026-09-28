@@ -10,7 +10,7 @@
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@rm-hull/chakra-error-fallback": "^0.1.6",
-    "@tanstack/react-router": "^1.170.38",
+    "@tanstack/react-router": "^1.170.39",
     "@tanstack/react-router-devtools": "^1.167.2",
     "clsx": "^2.1.1",
     "formik": "^2.4.9",
