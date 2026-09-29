@@ -43,7 +43,7 @@ __metadata:
     eslint-import-resolver-typescript: "npm:^4.4.5"
     eslint-plugin-import: "npm:^2.32.0"
     eslint-plugin-jsx-a11y: "npm:^6.10.2"
-    eslint-plugin-n: "npm:^18.3.0"
+    eslint-plugin-n: "npm:^18.4.0"
     eslint-plugin-node: "npm:^11.1.0"
     eslint-plugin-prettier: "npm:^5.5.6"
     eslint-plugin-promise: "npm:^7.3.0"
@@ -5586,6 +5586,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"argparse@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "argparse@npm:2.0.1"
+  checksum: 10/18640244e641a417ec75a9bd38b0b2b6b95af5199aa241b131d4b2fb206f334d7ecc600bd194861610a5579084978bfcbb02baa399dbe442d56d0ae5e60dbaef
+  languageName: node
+  linkType: hard
+
 "aria-query@npm:5.3.0":
   version: 5.3.0
   resolution: "aria-query@npm:5.3.0"
@@ -7043,9 +7050,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-n@npm:^18.3.0":
-  version: 18.3.0
-  resolution: "eslint-plugin-n@npm:18.3.0"
+"eslint-plugin-n@npm:^18.4.0":
+  version: 18.4.0
+  resolution: "eslint-plugin-n@npm:18.4.0"
   dependencies:
     "@eslint-community/eslint-utils": "npm:^4.5.0"
     enhanced-resolve: "npm:^5.17.1"
@@ -7054,6 +7061,7 @@ __metadata:
     globals: "npm:^15.11.0"
     globrex: "npm:^0.1.2"
     ignore: "npm:^5.3.2"
+    js-yaml: "npm:^5.4.1"
     semver: "npm:^7.6.3"
   peerDependencies:
     eslint: ">=8.57.1"
@@ -7064,7 +7072,7 @@ __metadata:
       optional: true
     typescript:
       optional: true
-  checksum: 10/59b7b243d895528b75ec1daa9b833620a0584bc0a2f56efe49ad823d609bc86bb5962258cb5f2e001c1422001feb6dcffd3aa3e7d2fd4943994ae387cd395a07
+  checksum: 10/bf0f6d5519d232c0b853484e4884756386811327bd812e8c74c66c9d824eee4652993a44f44c9418a20edd848124a586d39e477c706521b3add3ee5d6374d2f4
   languageName: node
   linkType: hard
 
@@ -8525,6 +8533,17 @@ __metadata:
   version: 4.0.0
   resolution: "js-tokens@npm:4.0.0"
   checksum: 10/af37d0d913fb56aec6dc0074c163cc71cd23c0b8aad5c2350747b6721d37ba118af35abdd8b33c47ec2800de07dedb16a527ca9c530ee004093e04958bd0cbf2
+  languageName: node
+  linkType: hard
+
+"js-yaml@npm:^5.4.1":
+  version: 5.4.2
+  resolution: "js-yaml@npm:5.4.2"
+  dependencies:
+    argparse: "npm:^2.0.1"
+  bin:
+    js-yaml: bin/js-yaml.mjs
+  checksum: 10/f2461abd1d6268fb226733f0a0e0aa48004bb824116e3dfa75f1a1279001936343b672066dfecdb852ac3ca883452706c383a760aa90430cb68ba395aa2cbc84
   languageName: node
   linkType: hard
 
