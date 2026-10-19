@@ -18,7 +18,7 @@ __metadata:
     "@rolldown/plugin-babel": "npm:^0.2.4"
     "@tanstack/react-router": "npm:^1.170.44"
     "@tanstack/react-router-devtools": "npm:^1.167.2"
-    "@tanstack/router-plugin": "npm:^1.168.45"
+    "@tanstack/router-plugin": "npm:^1.168.46"
     "@testing-library/dom": "npm:^10.4.2"
     "@testing-library/jest-dom": "npm:^7.0.1"
     "@testing-library/react": "npm:^16.3.3"
@@ -3425,32 +3425,32 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/router-generator@npm:1.167.43":
-  version: 1.167.43
-  resolution: "@tanstack/router-generator@npm:1.167.43"
+"@tanstack/router-generator@npm:1.167.44":
+  version: 1.167.44
+  resolution: "@tanstack/router-generator@npm:1.167.44"
   dependencies:
     "@babel/types": "npm:^7.29.8"
     "@tanstack/router-core": "npm:1.171.37"
-    "@tanstack/router-utils": "npm:1.162.3"
+    "@tanstack/router-utils": "npm:1.162.4"
     "@tanstack/virtual-file-routes": "npm:1.162.0"
     jiti: "npm:^2.7.0"
     magic-string: "npm:^0.30.21"
     prettier: "npm:^3.9.6"
     zod: "npm:^4.5.4"
-  checksum: 10/7acbb596418b93ca22d90c01a5814a3f77fb61d24f4bd07f0b4b9ff8aa458bafcca7cadd04dcf90926c0f069a21993ae0850ef8dfae3444ac396ccf0eeb4f707
+  checksum: 10/256f93cbf6aed863c2839b844fa051e36c5987806f403b029de3b8bc5d432c65ef64867a430ce39b7f0c12decd3d1b58bf0eecad48cd3ec089c02fd94537f219
   languageName: node
   linkType: hard
 
-"@tanstack/router-plugin@npm:^1.168.45":
-  version: 1.168.45
-  resolution: "@tanstack/router-plugin@npm:1.168.45"
+"@tanstack/router-plugin@npm:^1.168.46":
+  version: 1.168.46
+  resolution: "@tanstack/router-plugin@npm:1.168.46"
   dependencies:
     "@babel/core": "npm:^7.29.7"
     "@babel/template": "npm:^7.29.7"
     "@babel/types": "npm:^7.29.8"
     "@tanstack/router-core": "npm:1.171.37"
-    "@tanstack/router-generator": "npm:1.167.43"
-    "@tanstack/router-utils": "npm:1.162.3"
+    "@tanstack/router-generator": "npm:1.167.44"
+    "@tanstack/router-utils": "npm:1.162.4"
     chokidar: "npm:^5.0.0"
     unplugin: "npm:^3.3.0"
     zod: "npm:^4.5.4"
@@ -3471,23 +3471,23 @@ __metadata:
       optional: true
     webpack:
       optional: true
-  checksum: 10/308c00b9812fd3713c52759da679587925c9634c55b41e0c9fb5db18cf3140f5fab325decd74b6b946539f49f5b3da3dfed0bdaf4bb152dbbc0d413173bb18f1
+  checksum: 10/3fd494145b0daf8df0869be391eff40fffe95e2dbdf2417ec5a872ed9d0bdf287bde13033dd95b2cce8fb0f836a97fd257fb0301bedf9f87a624cbea1d498eba
   languageName: node
   linkType: hard
 
-"@tanstack/router-utils@npm:1.162.3":
-  version: 1.162.3
-  resolution: "@tanstack/router-utils@npm:1.162.3"
+"@tanstack/router-utils@npm:1.162.4":
+  version: 1.162.4
+  resolution: "@tanstack/router-utils@npm:1.162.4"
   dependencies:
     "@babel/generator": "npm:^7.29.8"
     "@babel/parser": "npm:^7.29.8"
     "@babel/types": "npm:^7.29.8"
     ansis: "npm:^4.3.1"
     babel-dead-code-elimination: "npm:^1.0.12"
-    diff: "npm:^8.0.4"
+    diff: "npm:^9.0.0"
     pathe: "npm:^2.0.3"
     tinyglobby: "npm:^0.2.17"
-  checksum: 10/807ef3af90ade538a2be5d893ca7c24f64a955fa38252533a4b623344b235ab3923a4b9669cf9250804d331bd068d567022cc2d310ab68eb154683fb05c82e0b
+  checksum: 10/3d3806fc7e7d1ee6b32a32732499e912eeafd4d41912c1281fe72e67bc9872000c892a318f1b614f32cd24bd1f9dfaa3a2a069bb4acf6c2b5fa28f5f38f88de9
   languageName: node
   linkType: hard
 
@@ -6400,10 +6400,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"diff@npm:^8.0.4":
-  version: 8.0.4
-  resolution: "diff@npm:8.0.4"
-  checksum: 10/b4036ceda0d1e10683a2313079ed52c5e6b09553ae29da87bce81d98714d9725dbf3c0f6f7c3b1f16eec049fe17087e38ee329e732580fa62f6ec1c2487b2435
+"diff@npm:^9.0.0":
+  version: 9.0.0
+  resolution: "diff@npm:9.0.0"
+  checksum: 10/f8b5e38a6a7ec73d1850ccb7ff19cda1d02502dc0f2c562ada0f40d7211bfb3075c2f3742104619a1f8f47ae333d48a6c77bffb080a2df900db36935080ea4fb
   languageName: node
   linkType: hard
 

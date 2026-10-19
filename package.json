@@ -25,7 +25,7 @@
     "@babel/core": "^8.0.7",
     "@chakra-ui/cli": "^3.37.0",
     "@rolldown/plugin-babel": "^0.2.4",
-    "@tanstack/router-plugin": "^1.168.45",
+    "@tanstack/router-plugin": "^1.168.46",
     "@testing-library/dom": "^10.4.2",
     "@testing-library/jest-dom": "^7.0.1",
     "@testing-library/react": "^16.3.3",
