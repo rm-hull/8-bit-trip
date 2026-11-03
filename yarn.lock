@@ -10151,9 +10151,9 @@ __metadata:
   linkType: hard
 
 "seroval@npm:^1.6.7":
-  version: 1.6.7
-  resolution: "seroval@npm:1.6.7"
-  checksum: 10/393aef5b09a0a9557268cc95552cbf4153418bcde04a5c2bfae988983e5b41f639e35a9bad04834268ac0879c18b04904374095e639ea6999e050a02b7fe4bbb
+  version: 1.7.7
+  resolution: "seroval@npm:1.7.7"
+  checksum: 10/bf231bf283efed71dd66c862846eb0188045aea0f2f2784875049c80a132f4a72226c236bd5c86b907f1c8f9c94dca711598343e813e51c7275b43f1a5563c92
   languageName: node
   linkType: hard
 
