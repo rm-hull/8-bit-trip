@@ -17,7 +17,7 @@ __metadata:
     "@rm-hull/chakra-error-fallback": "npm:^0.1.6"
     "@rolldown/plugin-babel": "npm:^0.3.0"
     "@tanstack/react-router": "npm:^1.170.46"
-    "@tanstack/react-router-devtools": "npm:^1.167.3"
+    "@tanstack/react-router-devtools": "npm:^1.167.4"
     "@tanstack/router-plugin": "npm:^1.169.0"
     "@testing-library/dom": "npm:^10.4.2"
     "@testing-library/jest-dom": "npm:^7.0.1"
@@ -3261,11 +3261,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/react-router-devtools@npm:^1.167.3":
-  version: 1.167.3
-  resolution: "@tanstack/react-router-devtools@npm:1.167.3"
+"@tanstack/react-router-devtools@npm:^1.167.4":
+  version: 1.167.4
+  resolution: "@tanstack/react-router-devtools@npm:1.167.4"
   dependencies:
-    "@tanstack/router-devtools-core": "npm:1.168.3"
+    "@tanstack/router-devtools-core": "npm:1.168.4"
   peerDependencies:
     "@tanstack/react-router": ^1.170.46
     "@tanstack/router-core": ^1.171.39
@@ -3274,7 +3274,7 @@ __metadata:
   peerDependenciesMeta:
     "@tanstack/router-core":
       optional: true
-  checksum: 10/195ba62f96b8ee8461788c628db05ca6bc35da2f4b4b3e5c4417a160276cda56307bd1ef25a8171fe2da46b8d3cdd1f96e5082d66c427c1379233cbb5d364849
+  checksum: 10/52203e17db81d5d413214cf046646ce40ee491eddc6b0ae9421bc68d339b1fabf075c93598f2952027521d511f22f655232382b41e9d22e56f07dfa98752febe
   languageName: node
   linkType: hard
 
@@ -3318,19 +3318,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/router-devtools-core@npm:1.168.3":
-  version: 1.168.3
-  resolution: "@tanstack/router-devtools-core@npm:1.168.3"
-  dependencies:
-    clsx: "npm:^2.1.1"
-    goober: "npm:^2.1.16"
+"@tanstack/router-devtools-core@npm:1.168.4":
+  version: 1.168.4
+  resolution: "@tanstack/router-devtools-core@npm:1.168.4"
   peerDependencies:
     "@tanstack/router-core": ^1.171.39
     csstype: ^3.0.10
   peerDependenciesMeta:
     csstype:
       optional: true
-  checksum: 10/e5a010e5750d231794da209488455187ba9e6d7ba47d25c11229fed38c8fb56a5287faefd1e8b9ec80a21da4be53ef5753706497075262de08894eddc14b07bc
+  checksum: 10/43e39733c4a763e8561f5b1ba9c3e6e10194592f3e6ea0d8eba60f82978f5d5fead7821ff77468887c6df8805bc4384e38e8bda81afabab0f12f04cc42a211be
   languageName: node
   linkType: hard
 
@@ -7769,15 +7766,6 @@ __metadata:
   version: 0.1.2
   resolution: "globrex@npm:0.1.2"
   checksum: 10/81ce62ee6f800d823d6b7da7687f841676d60ee8f51f934ddd862e4057316d26665c4edc0358d4340a923ac00a514f8b67c787e28fe693aae16350f4e60d55e9
-  languageName: node
-  linkType: hard
-
-"goober@npm:^2.1.16":
-  version: 2.1.18
-  resolution: "goober@npm:2.1.18"
-  peerDependencies:
-    csstype: ^3.0.10
-  checksum: 10/eca3db81a709a03f6ec9bb2624027e157c0b6fab6dccbe53b2ddd25a155a7e6e23a0b864574c33bdb0a05e0d0b865de8cc5151401e5a00d63f51be08fe7ccde6
   languageName: node
   linkType: hard
 
